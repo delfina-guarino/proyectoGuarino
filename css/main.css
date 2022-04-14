@@ -15,7 +15,13 @@ html{
    padding-left: 2.5rem;
 }
 
-
+li{
+   font-family: jost,sans-serif;
+   font-weight: 400 ;
+   color: #0C0C0C;
+   font-size: 1rem;
+   text-transform: uppercase;
+}
 
 .h2{
    font-family: degular,sans-serif;
@@ -66,13 +72,43 @@ footer{
    top: 100%;
 }
 
+.tituloFotografia{   
+   font-family: 'Jost', sans-serif;
+   font-weight: 300;
+   font-size: 2rem;
+   letter-spacing: 1.5rem;
+   color: #0C0C0C;
+   text-transform: uppercase;
+}
 
 
+#tituloGaleano{
+   font-family: degular,sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   color: #0C0C0C;
+   font-size: 7rem;
+   display: flex;
+   justify-items: center;
+}
 
-/*VISTA Desktop LANDING*/
+.gap100{
+   height: 90vh;
+}
+
+.h1{
+   font-family: degular,sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   color: #0C0C0C;
+   font-size: 7rem;
+   display: flex;
+   justify-items: center;
+}
+/*VISTA Desktop LANDING
 
 @media only screen and (min-width: 1024px){
-   /*grid padre*/
+   /*grid padre
    .containerMain{
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -81,7 +117,7 @@ footer{
       align-content: space-between;
       margin-top: 1rem;
    }
-   /*grid hijos*/
+   /*grid hijos
 
    .tituloLanding{
       grid-area: titulo;
@@ -106,7 +142,7 @@ footer{
       display: block;
    }
 
-   /*otros elementos*/
+   /*otros elementos
 
    body{
       min-height: 100%;
@@ -138,7 +174,7 @@ footer{
 
    
 
-   /*Estilos titulo Landing*/
+   /*Estilos titulo Landing
 
    .h1{
       font-family: degular,sans-serif;
@@ -162,11 +198,11 @@ footer{
    
 }
 
-
-/*VISTA Tablet LANDING*/
+/*
+/*VISTA Tablet LANDING
 
 @media only screen and (min-width: 768px) and (max-width:1023px){
-   /*grid padre*/
+   /*grid padre
    .containerMain{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -182,7 +218,7 @@ footer{
       justify-self: center;
    }
    
-   /*grid hijos*/
+   /*grid hijos
    .tituloLanding{
       grid-area: titulo;
       display: block;
@@ -230,7 +266,7 @@ footer{
 
    }
 
-   /*otros elementos*/
+   /*otros elementos
 
    
    .menuLista, ul li, .menuLista ul li a{
@@ -243,7 +279,7 @@ footer{
       text-decoration: none;
    }
    
-   /*Estilos titulo tablet*/
+   /*Estilos titulo tablet
    .h1{
       font-family: degular,sans-serif;
       font-weight: 400;
@@ -272,9 +308,9 @@ footer{
    }
 }
 
-/*VISTA Mobile LANDING*/
+/*VISTA Mobile LANDING
 @media only screen and (max-width: 767px){
-   /*grid padre*/
+   /*grid padre
    .containerMain{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -290,7 +326,7 @@ footer{
       justify-items: center;
    }
 
-   /*grid hijos*/
+   /*grid hijos
    .tituloLanding{
       grid-area: titulo;
       display: block;
@@ -334,7 +370,7 @@ footer{
       object-fit: cover;
    }
 
-  /*otros elementos*/
+  /*otros elementos
 
    header{
       grid-area: header;
@@ -376,19 +412,18 @@ footer{
 }
 
 
+*/
 
 
 
 
 
-
-/*fotos landing*/
+/*fotos landing
 .fotos{
    height: auto;
    display: flex;
    justify-items: end;
 }
-*/
 
 /*Estilo botón
 .boton a{

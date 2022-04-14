@@ -5,47 +5,95 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Proyecto Guarino</title>
+
+   <!--link bootstrap-->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
    <!--link css-->
    <link rel="stylesheet" href="css/main.css">
+
    <!--link fuentes-->
    <link rel="stylesheet" href="https://use.typekit.net/ejx2anl.css">   
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+   
 </head>
 
 <body>
-   <header class="menu">
-      <img class="logo" src="img/logotipo_1.svg" alt="">
-      <nav class="menuLista">
-         <ul>
-            <li>
-               <a href="pages/proyectos.html">Proyectos</a>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+           <img src="./img/logotipo.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./pages/proyectos.html">Portfolio</a>
             </li>
-            <li>
-               <a href="pages/contacto.html">Contacto</a>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/sobreMi.html">Sobre Mí</a>
             </li>
-            <li>
-               <a href="pages/sobreMi.html">Sobre Mí</a>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/contacto.html">Contacto</a>
             </li>
-         </ul>
-      </nav>    
+          </ul>
+        </div>
+      </div>
+   </nav>
 
-   </header>
-   
-   <main class="containerMain">
-
-      <!--Titulo-->
-      <section class="tituloLanding">
-         <h1 class="h1" id="tituloGaleano">Galeano</h1>
-         <h1 class="tituloFotografia">Fotografía</h1>
-      </section>
+   <section>
+      <div class="container-fluid">
+         <div class="row gap100 align-items-center">
+            <div class="col-md-4">
+               <h1 class="d-flex justify-content-end" id="tituloGaleano">Galeano</h1>
+               <h1 class="d-flex justify-content-end tituloFotografia">Fotografía</h1>
+            </div>
          
-      <!--Fotos-->
-
-      <section class="foto1">
-         <img class="fotoUno" src="img/foto 1.jpg" alt="">
-      </section>
+            <div class="col-md-2">
+               <img class="img-fluid" src="img/foto 1.jpg" alt="">
+            </div>
+         
+            <div class="col-md-2">
+               <img class="img-fluid" src="img/foto 2.jpg" alt="">
+            </div>
+         
+            <div class="col-md-2">
+               <img class="img-fluid" src="img/foto 3.jpg" alt="">
+            </div>
+         </div>
+      </div>
+   </section>
+   <!--
+   <main class="container">
+         <div class="row">
+           <div class="col-md-4">
+               <h1 id="tituloGaleano">Galeano</h1>
+               <h1 class="tituloFotografia">Fotografía</h1>
+           </div>
+           <div class="col-md-2">
+               <img class="col" src="img/foto 1.jpg" alt="">
+           </div>
+           <div class="col-md-2">
+               <img class="fotoDos" src="img/foto 2.jpg" alt="">
+           </div>
+            <div class="col-md-2">
+               <img class="fotoTres" src="img/foto 3.jpg" alt="">
+           </div>
+         </div>
+      
+      
+      <div class="row">
+         <h1 class="col-2" id="tituloGaleano">Galeano</h1>
+         <h1 class="tituloFotografia">Fotografía</h1>
+      </div>
+         
+      <div class="row">
+         <img class="col-2" src="img/foto 1.jpg" alt="">
+      </div>
 
       <section class="foto2">
          <img class="fotoDos" src="img/foto 2.jpg" alt="">
@@ -54,20 +102,22 @@
       <section class="foto3">
          <img class="fotoTres" src="img/foto 3.jpg" alt="">
       </section>
-         
+      -->
          
       <!--Botón ver todos
 
       <button class="boton">
          <a href="pages/proyectos.html">Ver todos</a>
-         </button>-->
+         </button>
 
-   </main>
+   </main>-->
       
 
-   <footer class="footer">
-      <p>Todos los derechos reservados</p>
-   </footer>
+   <footer class="container-fluid">
+      <div class="row">
+         <p class="col-12">Todos los derechos reservados</p>
+      </div>
+   </footer> 
 
 </body>
 </html> 
