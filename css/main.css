@@ -15,14 +15,12 @@ html{
    padding-left: 2.5rem;
 }
 
-
-
 .h2{
    font-family: degular,sans-serif;
    font-weight: 400;
    font-style: normal;
    color: #0C0C0C;
-   font-size: 48px;
+   font-size: 3rem;
 }
 
 .h4{
@@ -41,9 +39,12 @@ html{
    text-transform: uppercase;
 }
 
-header{
-   background-color: #ffffff;
+.body{
+   font: normal 16px Montserrat;
+   margin: 0px 20px 20px 0px;
+   line-height: 28px;
 }
+
 .menu{
    display: flex;
    justify-content: space-between;
@@ -69,7 +70,7 @@ footer{
 
 
 
-/*VISTA Desktop LANDING*/
+/*VISTA Desktop INDEX*/
 
 @media only screen and (min-width: 1024px){
    /*grid padre*/
@@ -145,7 +146,7 @@ footer{
       font-weight: 400;
       font-style: normal;
       color: #0C0C0C;
-      font-size: 7rem;
+      font-size: 5rem;
       display: flex;
       justify-items: center;
    }
@@ -377,12 +378,7 @@ footer{
 
 
 
-
-
-
-
-
-/*fotos landing*/
+/*fotos landing
 .fotos{
    height: auto;
    display: flex;
@@ -403,79 +399,165 @@ footer{
    background: #FB8500;
    border-radius: 60px;
 }
+*/
 
 
 
 /*PAGINA PROYECTOS*/
 
-.containerProyectos{
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   height: 100vh;
-   grid-column-gap: 1rem; 
-   grid-template-areas: "header header header header"
-                        "main main main main"
-                        "footer footer footer footer";
+/*Vista desktop*/
+
+@media only screen and (min-width: 1024px){
+   .gridProyectos{
+      display: grid;
+      height: 100vh;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "header header header"
+                           "main main main"
+                           "footer footer footer" ;
+      grid-template-rows: 0.2fr 2fr 0.2fr;
+   }
+
+   header{
+      grid-area: header;
+      width: auto;
+   }
+   
+   #tituloProyectos{
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+   }
+
+   main{
+      grid-area: main;
+      display: flex;
+      flex-direction: column;
+   }
+   
+   .containerCards{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   }
+   
+   .proyectoCard1{
+      display: flex;
+      flex-direction: column;
+      margin: 30px;
+   }
+
+
+   .proyectoCard2{
+      display: flex;
+      flex-direction: column;
+      margin: 30px;
+   }
+   
+   .proyectoCard3{
+      display: flex;
+      flex-direction: column;
+      margin: 30px;
+   }
+
+   #animacionCard:hover{
+      transform: scale(1.1);
+   }
+
+   footer{
+      grid-area: footer;
+   }
 }
 
-header{
-   grid-area: header;
+/*Vista mobile*/
+@media only screen and (max-width: 767px){
+   .gridProyectos{
+      display: grid;
+      height: 100vh;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "header"
+                           "main"
+                           "footer" ;
+      grid-template-rows: 0.2fr 3fr 0.2fr;
+      gap: 1rem;
+   }
+
+   header{
+      grid-area: header;
+      width: auto;
+   }
+   
+   #titulo{
+      display: inline;
+      justify-content: center;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+   }
+
+   #tituloProyectos{
+      display: flex;
+      justify-content: center;
+   }
+
+   main{
+      grid-area: main;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+   }
+   
+   .containerCards{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+   }
+   
+   .proyectoCard1{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+   }
+
+   .proyectoCard2{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+   }
+   
+   .proyectoCard3{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+   }
+
+   #portadaProyectoUno{
+      object-fit: cover;
+      width: 680px;
+      max-height: 350px;
+   }
+   
+   #portadaProyectoDos{
+      object-fit: cover;
+      width: 680px;
+      max-height: 350px;
+   }
+
+   #portadaProyectoTres{
+      object-fit: cover;
+      width: 680px;
+      max-height: 350px;
+   }
+
+   footer{
+      grid-area: footer;
+   }
 }
 
-main{
-   grid-area: main;
-}
-
-footer{
-   grid-area: footer;
-}
-
-
-.menuListaProyectos{
-   font: 1rem Jost;
-   list-style: none;
-   display: inline-block;
-   text-transform: uppercase;
-   color: #0C0C0C;
-   padding: 1rem;
-   text-decoration: none;
-}
-
-
-/*Estilo titulo proyectos*/
-
-#tituloProyectos{
-   display: flex;
-   justify-content: center;
-}
-
-/*layout portadas proyectos*/
-.portadasProyectos{
-   display: flex;
-   flex-direction: row;
-   margin: 30px 80px 80px 302px;
-}
-
-#portadaProyectoUno{
-   width: 424px;
-   height: 577px;
-   padding: 20px;
-}
-
-#portadaProyectoDos{
-   width: 424px;
-   height: 577px;
-   padding: 20px;
-}
-
-.proyectoCard{
-   display: flex;
-   flex-direction: column;
-}
-
-.proyectoCard:hover{
-   transform: scale(1.1);
-}
 
 /*Estilo titulos proyectos*/
 .tituloProyecto{
@@ -483,130 +565,175 @@ footer{
    color: #0C0C0C;
    text-transform: uppercase;
    text-decoration: none;
-   padding-left: 18px;
 }
 
-
-/*PAGINA SOBRE MI*/
-
-/*Estilos titulos*/
-
-#tituloSobre{
-   margin: 80px 0px 20px 0px;
-}
-
-.fotoPresentacion{
-   margin: 50px 0px 0px 80px;
-   width: 500px;
-   display: inline;
-}
-
-.containerSobre{
-   margin: 20px 250px;
-   width: 640px;
-   position: absolute;
-   top: 100px;
-   display: inline;
-}
-
-#subSobre{
-   margin: 0px 0px 20px 0px;
-}
-
-#textoSobre{
-   font: normal 16px Montserrat;
-   margin: 0px 20px 20px 0px;
-   line-height: 28px;
-}
-
-.linkInstagram{
-   font: normal 16px Montserrat;
-   font-weight: 500;
-   margin: 0px 0px 20px 0px;
-   line-height: 28px;
-   text-decoration: none;
-   color:#FB8500;
-}
-
-/*Estilo línea*/
-.lineaVertical{
-   border: 1px solid #0c0c0c;
-   height: 92%;
-   position: absolute;
-   margin-left: 35%;
-   top: 100px;
-}
 
 /*PAGINA CONTACTO*/
 
-/*Estilo titulo*/
-.containerContacto{
-   margin: 20px 40%;
-   width: 800px;
-   height: 725px;
-   position: relative;
-   top: 70px;
+/*Vista desktop*/
+
+@media only screen and (min-width: 1024px){
+   .gridContacto{
+      display: grid;
+      height: 80vh;
+      grid-template-areas: "contactos formulario";
+      padding: 5rem;
+   }
+   
+   header{
+      width: auto;
+   }
+
+   .contactos{
+      grid-template-areas: contactos;
+      justify-content: end;
+   }
+
+   .containerContacto{
+      grid-template-areas: formulario;
+   }
+
+   
+   .formulario{
+      border: none;
+      background-color: transparent;
+      resize: none;
+      outline: none;
+   }
+
+   .campo{
+      display: block;
+      border-top-style: none;
+      border-right-style: none;
+      border-left-style: none;
+      border-bottom: solid 1px #444343;
+      font-family: Montserrat ;
+      font-size: 14px;
+      height: 25px;
+      width: 500px;
+   }
+
+   
+   .menuLista, ul li, .menuLista ul li a{
+      font: normal normal normal 1rem Jost;
+      list-style: none;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #0C0C0C;
+      padding: 1rem;
+      text-decoration: none;
+   }
+   
+   .input{
+      padding: 0.8rem;
+   }
+
+   .botonEnviar{
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #2C2C2C;
+      border-radius: 150px;
+      padding: 10px 20px 10px 20px;
+      font-family: jost,sans-serif;
+      font-weight: 400 ;
+      color: #0C0C0C;
+      font-size: 16px;
+      text-transform: uppercase;
+      justify-self: end;
+   }
 }
 
-#subCharlemos{
-   margin: 0px 0px 20px 0px;
-}
+@media only screen and (max-width: 767px){
+   .gridContacto{
+      display: grid;
+      grid-template-areas: "contactos"
+                           "formulario";
+      grid-template-columns: 1fr;
+      height: 100vh;
+      width: fit-content;
+      justify-items: center;
+   }
+   
+   header{
+      width: auto;
+   }
 
-.formulario{
-   border: none;
-   background-color: transparent;
-   resize: none;
-   outline: none;
-}
+   .contactos{
+      grid-template-areas: contactos;
+      justify-content: center;
+   }
 
-.input{
-   margin: 20px 0px 20px 0px;
-}
+   .containerContacto{
+      grid-template-areas: formulario;
+      justify-content: center;
+   }
 
-.campo{
-   display: block;
-   margin-top: 10px;
-   border-top-style: none;
-   border-right-style: none;
-   border-left-style: none;
-   border-bottom: solid 1px #444343;
-   font-family: Montserrat ;
-   font-size: 14px;
-   height: 25px;
-   width: 500px;
-}
+   .formulario{
+      border: none;
+      background-color: transparent;
+      resize: none;
+      outline: none;
+   }
 
-.botonEnviar{
-   background: #FFFFFF 0% 0% no-repeat padding-box;
-   border: 1px solid #2C2C2C;
-   border-radius: 150px;
-   padding: 10px 20px 10px 20px;
-   font-family: jost,sans-serif;
-   font-weight: 400 ;
-   color: #0C0C0C;
-   font-size: 16px;
-   text-transform: uppercase;
-   margin-left: 700px;   
-}
+   .campo{
+      display: block;
+      border-top-style: none;
+      border-right-style: none;
+      border-left-style: none;
+      border-bottom: solid 1px #444343;
+      font-family: Montserrat ;
+      font-size: 14px;
+      height: 25px;
+      width: 280px;
+   }   
+   
+   .input{
+      padding: 0.8rem;
+   }
 
-.contactos{
-   position: absolute;
-   top: 246px;
-   left: 80px;
-   width: 300px;
-   height: 35px;
-}
+   .botonEnviar{
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #2C2C2C;
+      border-radius: 150px;
+      padding: 10px 20px 10px 20px;
+      font-family: jost,sans-serif;
+      font-weight: 400 ;
+      color: #0C0C0C;
+      font-size: 16px;
+      text-transform: uppercase;
+      justify-self: end;
+   }
 
-.lineaVerticalContacto{
-   border: 1px solid #0c0c0c;
-   height: 92%;
-   position: absolute;
-   margin-left: 35%;
-   top: 100px;
-}
+   .botonEnviar:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+   }
 
-/*Pagina Proyecto Uno*/
-.infoProUno{
-   padding: 5rem;
-}
+   footer{
+      grid-area: footer;
+      background-color: #f5ac58;
+      text-align: center;
+      padding: 0.3rem;
+      font-family: jost;
+      font-weight: 400;
+      position: sticky;
+      bottom: 0;
+   }
 
+   .h5{
+      font-size: 1rem;
+   }
+
+   .h2{
+      font-size: 1.5rem;
+   }
+
+   .body{
+      font-size: 0.8rem;
+   }
+
+   .h4{
+      font-size: 1rem;
+   }
+   
+}

@@ -14,57 +14,68 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+   <!--Link animaciones-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+ />
+
+
 </head>
 
 <body>
-   <!--menu-->
-   <header class="menu">
-      <a href="../index.html"><img class="logo" src="../img/logotipo_1.svg" alt=""></a>
-      <nav class="menuLista">
-         <ul>
-            <li>
-               <a href="../../index.html">Home</a>
-            </li>
-            <li>
-               <a href="../pages/proyectos.html">Proyectos</a>
-            </li>
-            <li>
-               <a href="../pages/contacto.html">Contacto</a>
-            </li>
-            <li>
-               <a href="../pages/sobreMi.html">Sobre Mí</a>
-            </li>
-         </ul>
-      </nav>
-   </header>
-   
+   <!--container grid proyectos-->
+   <div class="gridProyectos">
 
-   <main>
+      <header class="menu">
+         <a href="../index.html"><img class="logo" src="../img/logotipo_1.svg" alt=""></a>
+         <nav class="menuLista">
+            <ul>
+               <li>
+                  <a href="../../index.html">Home</a>
+               </li>
+               <li>
+                  <a href="../pages/proyectos.html">Proyectos</a>
+               </li>
+               <li>
+                  <a href="../pages/contacto.html">Contacto</a>
+               </li>
+               <li>
+                  <a href="../pages/sobreMi.html">Sobre Mí</a>
+               </li>
+            </ul>
+         </nav>
+      </header>
       
-   <div class="containerProyectos">
-         <h1 class="h1" id="tituloProyectos">Proyectos</h1>
-         <div class="portadasProyectos">
-   
-            <div class="proyectoCard">
-               <a href="/pages/infoProyecto1.html"><img id="portadaProyectoUno" src="../img/portada proyecto 1.jpg" alt="" width=300></a>
-               <a href="/pages/infoProyecto1.html" class="tituloProyecto" id="nombreProyectoUno">Proyecto 1</a>
-            </div>
-   
-            <div class="proyectoCard">
-               <a href="/pages/infoProyecto1.html"><img id="portadaProyectoDos" src="../img/foto pro 2 1.jpg" alt="" width=300></a>
-               <a href="" class="tituloProyecto" id="nombreProyectoUno">Proyecto 2</a>
-            </div>
+      
+      <main>
+         <div id="titulo">
+            <h1 class="h1" id="tituloProyectos">Proyectos</h1>
          </div>
-   
+
+         <div class="containerCards animate__animated animate__fadeIn">
+            <div class="proyectoCard1" id="animacionCard">
+               <a href="/pages/infoProyecto1.html"><img id="portadaProyectoUno" src="../img/portada proyecto 1.jpg" alt="" width=300></a>
+               <a href="/pages/infoProyecto1.html" class="tituloProyecto" id="nombreProyectoUno">Proyecto 1</a>           
+            </div>                        
+                     
+            <div class="proyectoCard2" id="animacionCard">            
+               <a href=""><img id="portadaProyectoDos" src="../img/foto pro 2 1.jpg" alt="" width=300></a>
+               <a href="" class="tituloProyecto" id="nombreProyectoUno">Proyecto 2</a>                        
+            </div>            
+                     
+            <div class="proyectoCard3" id="animacionCard">            
+               <a href=""><img id="portadaProyectoTres" src="../img/foto pro 3 1.png" alt="" width=300></a>            
+               <a href="" class="tituloProyecto" id="nombreProyectoTres">Proyecto 3</a>            
+            </div>
+         </div>          
+      </main>
+
+      
+      <footer class="footer">
+         <p>Todos los derechos reservados</p>
+      </footer>
+      
    </div>
-
-   </main>
-
-
-   <footer class="footer">
-      <p>Todos los derechos reservados</p>
-   </footer>
-
 
 </body>
 </html>
