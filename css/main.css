@@ -1,739 +1,164 @@
-/*reset*/
-*{
-   margin: 0%;
-   padding: 0%;
-   box-sizing: border-box;
-} 
-
-html{
-   height: 100%;
-}
-
-
-.logo{
-   height: 3.2rem;
-   padding-left: 2.5rem;
-}
-
-.h2{
-   font-family: degular,sans-serif;
-   font-weight: 400;
-   font-style: normal;
-   color: #0C0C0C;
-   font-size: 3rem;
-}
-
-.h4{
-   font-family: jost,sans-serif;
-   font-weight: 300 ;
-   color: #0C0C0C;
-   font-size: 1.25rem;
-   text-transform: uppercase;
-}
-
-.h5{
-   font-family: jost,sans-serif;
-   font-weight: 400 ;
-   color: #0C0C0C;
-   font-size: 1rem;
-   text-transform: uppercase;
-}
-
-.body{
-   font: normal 16px Montserrat;
-   margin: 0px 20px 20px 0px;
-   line-height: 28px;
-}
-
-.menu{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   background-color: #ffffff;
-   position: sticky;
-   z-index: 1;
-   border-bottom: solid 2px #0C0C0C;
-}
-
-footer{
-   grid-area: footer;
-   background-color: #f5ac58;
-   text-align: center;
-   padding: 0.3rem;
-   font-family: jost;
-   font-weight: 400;
-   position: sticky;
-   bottom: 0;
-   top: 100%;
-}
-
-
-
-
-/*VISTA Desktop INDEX*/
-
-@media only screen and (min-width: 1024px){
-   /*grid padre*/
-   .containerMain{
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-gap: 1rem; 
-      grid-template-areas: "titulo foto1 foto2 foto3";
-      align-content: space-between;
-      margin-top: 1rem;
-   }
-   /*grid hijos*/
-
-   .tituloLanding{
-      grid-area: titulo;
-      display: block;
-      justify-items: center;
-      align-self: center;
-      padding-left: 3rem;
-   }
-
-   .foto1{
-      grid-area: foto1;
-      display: block;
-   }
-   
-   .foto2{
-      grid-area: foto2;
-      display: block;
-   }
-
-   .foto3{
-      grid-area: foto3;
-      display: block;
-   }
-
-   /*otros elementos*/
-
-   body{
-      min-height: 100%;
-      align-content: center;
-      margin-top: 3rem;
-   }
-
-   header{
-      height: 8vh;
-      width: 100%;
-      padding-bottom: 3rem;
-   }
-   
-   main section img{
-      padding-top: 1rem;
-      width: 90%;
-   }
-
-   .menuLista, ul li, .menuLista ul li a{
-      font: normal normal normal 1rem Jost;
-      list-style: none;
-      display: inline-block;
-      text-transform: uppercase;
-      color: #0C0C0C;
-      padding: 1rem;
-      text-decoration: none;
-   }
-   
-
-   
-
-   /*Estilos titulo Landing*/
-
-   .h1{
-      font-family: degular,sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      color: #0C0C0C;
-      font-size: 5rem;
-      display: flex;
-      justify-items: center;
-   }
-
-   .tituloFotografia{   
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      font-size: 2rem;
-      letter-spacing: 1.5rem;
-      color: #0C0C0C;
-      text-transform: uppercase;
-   }
-
-   
-}
-
-
-/*VISTA Tablet LANDING*/
-
-@media only screen and (min-width: 768px) and (max-width:1023px){
-   /*grid padre*/
-   .containerMain{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      min-height: 100vh;
-      column-gap: 1rem;
-      grid-template-areas: "header header"
-                           "titulo foto1"
-                           "foto2 foto1"
-                           "foto2 foto3"
-                           "footer footer";
-      justify-items: center;
-      align-items: center;
-      justify-self: center;
-   }
-   
-   /*grid hijos*/
-   .tituloLanding{
-      grid-area: titulo;
-      display: block;
-      justify-items: center;
-      align-self: start;
-      padding: 0rem 3rem 3rem 3rem;
-      z-index: 1;
-   }
-
-   .foto1{
-      grid-area: foto1;
-      display: flex;
-   }
-
-   .fotoUno{
-      height: 500px;
-      width: auto;
-      padding-bottom: 1rem;
-      padding-right: 1rem;
-   }
-
-   .foto2{
-      grid-area: foto2;
-      display: block;
-      align-self: start;
-   }
-
-   .fotoDos{
-      height: 600px;
-      width: auto;
-   }
-
-   .foto3{
-      grid-area: foto3;
-      display: block;
-      padding: 1rem;
-      align-self: start;
-   }
-
-   .fotoTres{
-      height: 500px;
-      width: auto;
-      padding-top: 1rem;
-      padding-right: 1rem;
-
-   }
-
-   /*otros elementos*/
-
-   
-   .menuLista, ul li, .menuLista ul li a{
-      font: normal normal normal 1rem Jost;
-      list-style: none;
-      display: none;
-      text-transform: uppercase;
-      color: #0C0C0C;
-      padding: 1rem;
-      text-decoration: none;
-   }
-   
-   /*Estilos titulo tablet*/
-   .h1{
-      font-family: degular,sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      color: #0C0C0C;
-      font-size: 5rem;
-      display: flex;
-      justify-items: center;
-   }
-
-   .tituloFotografia{   
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      font-size: 1.5rem;
-      letter-spacing: 1rem;
-      color: #0C0C0C;
-      text-transform: uppercase;
-      display: flex;
-      justify-items: center;
-   }
-
-   header{
-      grid-area: header;
-      height: 12vh;
-      width: 100%;
-   }
-}
-
-/*VISTA Mobile LANDING*/
-@media only screen and (max-width: 767px){
-   /*grid padre*/
-   .containerMain{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      min-height: 100vh;
-      min-width: 100%;
-      column-gap: 1rem;
-      grid-template-areas:"titulo titulo"
-                           "foto1 foto1"
-                           "foto2 foto2"
-                           "foto3 foto3"
-                           "footer footer";
-      justify-content: center;
-      justify-items: center;
-   }
-
-   /*grid hijos*/
-   .tituloLanding{
-      grid-area: titulo;
-      display: block;
-      justify-items: center;
-      align-self: center;
-   }
-
-   .foto1{
-      grid-area: foto1;
-      display: flex;
-      align-self: start;
-   }
-
-   .fotoUno{
-      height: 200px;
-      width: 400px;
-      object-fit: cover;
-   }
-
-   .foto2{
-      grid-area: foto2;
-      display: block;
-      align-self: start;
-   }
-
-   .fotoDos{
-      height: 200px;
-      width: 400px;
-      object-fit: cover;
-   }
-
-   .foto3{
-      grid-area: foto3;
-      display: block;
-      align-self: start;
-   }
-
-   .fotoTres{
-      height: 200px;
-      width: 400px;
-      object-fit: cover;
-   }
-
-  /*otros elementos*/
-
-   header{
-      grid-area: header;
-      height: 15vh;
-      width: 100vh;      
-   }
-
-   .menuLista, ul li, .menuLista ul li a{
-      font: normal normal normal 1rem Jost;
-      list-style: none;
-      display: none;
-      text-transform: uppercase;
-      color: #0C0C0C;
-      padding: 1rem;
-      text-decoration: none;
-   }
-
-
-   .h1{
-      font-family: degular,sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      color: #0C0C0C;
-      font-size: 5rem;
-      display: flex;
-      justify-items: center;
-   }
-
-   .tituloFotografia{   
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      font-size: 1.5rem;
-      letter-spacing: 1rem;
-      color: #0C0C0C;
-      text-transform: uppercase;
-      display: flex;
-      justify-items: center;
-   }
-}
-
-
-
-/*fotos landing
-.fotos{
-   height: auto;
-   display: flex;
-   justify-items: end;
-}
-*/
-
-/*Estilo botón
-.boton a{
-   background: none;
-	color: inherit;
-	border: none;
-   font-size: 15px;
-   font-family: Jost;
-   font-weight: 500;
-   text-decoration: none;
-   color: #f7eedd;
-   background: #FB8500;
-   border-radius: 60px;
-}
-*/
-
-
-
-/*PAGINA PROYECTOS*/
-
-/*Vista desktop*/
-
-@media only screen and (min-width: 1024px){
-   .gridProyectos{
-      display: grid;
-      height: 100vh;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: "header header header"
-                           "main main main"
-                           "footer footer footer" ;
-      grid-template-rows: 0.2fr 2fr 0.2fr;
-   }
-
-   header{
-      grid-area: header;
-      width: auto;
-   }
-   
-   #tituloProyectos{
+.h1 {
+  font-family: degular,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #0C0C0C;
+  font-size: 5rem;
+  display: flex;
+  justify-items: center; }
+
+.h2 {
+  font-family: degular,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #0C0C0C;
+  font-size: 3rem; }
+
+.h4 {
+  font-family: jost,sans-serif;
+  font-weight: 300;
+  color: #0C0C0C;
+  font-size: 1.25rem;
+  text-transform: uppercase; }
+
+.h5 {
+  font-family: jost,sans-serif;
+  font-weight: 400;
+  color: #0C0C0C;
+  font-size: 1rem;
+  text-transform: uppercase; }
+
+.body {
+  font: normal 16px Montserrat;
+  margin: 0px 20px 20px 0px;
+  line-height: 28px; }
+
+.gridProyectos main div .tituloProyecto {
+  font: 400 16px Jost;
+  color: #0C0C0C;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+.containerMain {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1rem;
+  grid-template-areas: "titulo foto1 foto2 foto3";
+  align-content: space-between;
+  margin-top: 1rem; }
+  .containerMain .tituloLanding {
+    grid-area: titulo;
+    display: block;
+    justify-items: center;
+    align-self: center;
+    padding-left: 3rem; }
+  .containerMain .foto1 {
+    grid-area: foto1;
+    display: block; }
+  .containerMain .foto2 {
+    grid-area: foto2;
+    display: block; }
+  .containerMain .foto3 {
+    grid-area: foto3;
+    display: block; }
+
+.gridProyectos {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  grid-template-rows: 0.2fr 2fr 0.2fr; }
+  .gridProyectos header {
+    grid-area: header;
+    width: auto; }
+  .gridProyectos main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column; }
+    .gridProyectos main div #tituloProyectos {
       display: flex;
       justify-content: center;
-      padding: 2rem;
-   }
-
-   main{
-      grid-area: main;
-      display: flex;
-      flex-direction: column;
-   }
-   
-   .containerCards{
+      padding: 2rem; }
+    .gridProyectos main .containerCards {
       display: flex;
       flex-direction: row;
-      justify-content: center;
-   }
-   
-   .proyectoCard1{
-      display: flex;
-      flex-direction: column;
-      margin: 30px;
-   }
+      justify-content: center; }
+      .gridProyectos main .containerCards #animacionCard:hover {
+        transform: scale(1.1); }
+      .gridProyectos main .containerCards .proyectoCard1 {
+        display: flex;
+        flex-direction: column;
+        margin: 30px; }
+      .gridProyectos main .containerCards .proyectoCard2 {
+        display: flex;
+        flex-direction: column;
+        margin: 30px; }
+      .gridProyectos main .containerCards .proyectoCard3 {
+        display: flex;
+        flex-direction: column;
+        margin: 30px; }
 
+footer {
+  grid-area: footer; }
 
-   .proyectoCard2{
-      display: flex;
-      flex-direction: column;
-      margin: 30px;
-   }
-   
-   .proyectoCard3{
-      display: flex;
-      flex-direction: column;
-      margin: 30px;
-   }
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box; }
 
-   #animacionCard:hover{
-      transform: scale(1.1);
-   }
+html {
+  height: 100%; }
 
-   footer{
-      grid-area: footer;
-   }
-}
-
-/*Vista mobile*/
-@media only screen and (max-width: 767px){
-   .gridProyectos{
-      display: grid;
-      height: 100vh;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: "header"
-                           "main"
-                           "footer" ;
-      grid-template-rows: 0.2fr 3fr 0.2fr;
-      gap: 1rem;
-   }
-
-   header{
-      grid-area: header;
-      width: auto;
-   }
-   
-   #titulo{
-      display: inline;
-      justify-content: center;
-      padding-top: 1rem;
-      padding-bottom: 2rem;
-   }
-
-   #tituloProyectos{
-      display: flex;
-      justify-content: center;
-   }
-
-   main{
-      grid-area: main;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 1rem;
-   }
-   
-   .containerCards{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 3rem;
-   }
-   
-   .proyectoCard1{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 10px;
-   }
-
-   .proyectoCard2{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 10px;
-   }
-   
-   .proyectoCard3{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 10px;
-   }
-
-   #portadaProyectoUno{
-      object-fit: cover;
-      width: 680px;
-      max-height: 350px;
-   }
-   
-   #portadaProyectoDos{
-      object-fit: cover;
-      width: 680px;
-      max-height: 350px;
-   }
-
-   #portadaProyectoTres{
-      object-fit: cover;
-      width: 680px;
-      max-height: 350px;
-   }
-
-   footer{
-      grid-area: footer;
-   }
-}
-
-
-/*Estilo titulos proyectos*/
-.tituloProyecto{
-   font: 400 16px Jost;
-   color: #0C0C0C;
-   text-transform: uppercase;
-   text-decoration: none;
-}
-
-
-/*PAGINA CONTACTO*/
-
-/*Vista desktop*/
-
-@media only screen and (min-width: 1024px){
-   .gridContacto{
-      display: grid;
-      height: 80vh;
-      grid-template-areas: "contactos formulario";
-      padding: 5rem;
-   }
-   
-   header{
-      width: auto;
-   }
-
-   .contactos{
-      grid-template-areas: contactos;
-      justify-content: end;
-   }
-
-   .containerContacto{
-      grid-template-areas: formulario;
-   }
-
-   
-   .formulario{
-      border: none;
-      background-color: transparent;
-      resize: none;
-      outline: none;
-   }
-
-   .campo{
-      display: block;
-      border-top-style: none;
-      border-right-style: none;
-      border-left-style: none;
-      border-bottom: solid 1px #444343;
-      font-family: Montserrat ;
-      font-size: 14px;
-      height: 25px;
-      width: 500px;
-   }
-
-   
-   .menuLista, ul li, .menuLista ul li a{
-      font: normal normal normal 1rem Jost;
-      list-style: none;
-      display: inline-block;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  position: sticky;
+  z-index: 1;
+  border-bottom: solid 2px #0C0C0C;
+  height: 8vh;
+  padding-bottom: 1rem; }
+  header .logo {
+    height: 3.2rem;
+    padding-left: 2.5rem; }
+  header nav ul li {
+    font: normal normal normal 1rem Jost;
+    list-style: none;
+    display: inline-block;
+    padding: 1rem; }
+    header nav ul li a {
       text-transform: uppercase;
       color: #0C0C0C;
-      padding: 1rem;
-      text-decoration: none;
-   }
-   
-   .input{
-      padding: 0.8rem;
-   }
+      text-decoration: none; }
 
-   .botonEnviar{
-      background: #FFFFFF 0% 0% no-repeat padding-box;
-      border: 1px solid #2C2C2C;
-      border-radius: 150px;
-      padding: 10px 20px 10px 20px;
-      font-family: jost,sans-serif;
-      font-weight: 400 ;
-      color: #0C0C0C;
-      font-size: 16px;
-      text-transform: uppercase;
-      justify-self: end;
-   }
-}
-
-@media only screen and (max-width: 767px){
-   .gridContacto{
-      display: grid;
-      grid-template-areas: "contactos"
-                           "formulario";
-      grid-template-columns: 1fr;
-      height: 100vh;
-      width: fit-content;
-      justify-items: center;
-   }
-   
-   header{
-      width: auto;
-   }
-
-   .contactos{
-      grid-template-areas: contactos;
-      justify-content: center;
-   }
-
-   .containerContacto{
-      grid-template-areas: formulario;
-      justify-content: center;
-   }
-
-   .formulario{
-      border: none;
-      background-color: transparent;
-      resize: none;
-      outline: none;
-   }
-
-   .campo{
-      display: block;
-      border-top-style: none;
-      border-right-style: none;
-      border-left-style: none;
-      border-bottom: solid 1px #444343;
-      font-family: Montserrat ;
-      font-size: 14px;
-      height: 25px;
-      width: 280px;
-   }   
-   
-   .input{
-      padding: 0.8rem;
-   }
-
-   .botonEnviar{
-      background: #FFFFFF 0% 0% no-repeat padding-box;
-      border: 1px solid #2C2C2C;
-      border-radius: 150px;
-      padding: 10px 20px 10px 20px;
-      font-family: jost,sans-serif;
-      font-weight: 400 ;
-      color: #0C0C0C;
-      font-size: 16px;
-      text-transform: uppercase;
-      justify-self: end;
-   }
-
-   .botonEnviar:active {
-      background-color: #3e8e41;
-      box-shadow: 0 5px #666;
-      transform: translateY(4px);
-   }
-
-   footer{
-      grid-area: footer;
-      background-color: #f5ac58;
-      text-align: center;
-      padding: 0.3rem;
-      font-family: jost;
-      font-weight: 400;
-      position: sticky;
-      bottom: 0;
-   }
-
-   .h5{
-      font-size: 1rem;
-   }
-
-   .h2{
+body {
+  min-height: 95%;
+  align-content: center;
+  margin-top: 3rem; }
+  body main .tituloLanding {
+    grid-area: titulo;
+    display: block;
+    justify-items: center;
+    align-self: center;
+    padding-left: 3rem; }
+    body main .tituloLanding .tituloFotografia {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
       font-size: 1.5rem;
-   }
+      letter-spacing: 1rem;
+      color: #0C0C0C;
+      text-transform: uppercase;
+      display: flex;
+      justify-items: center; }
 
-   .body{
-      font-size: 0.8rem;
-   }
-
-   .h4{
-      font-size: 1rem;
-   }
-   
-}
+footer {
+  top: 100%;
+  background-color: #f5ac58;
+  background-color: #f5ac58;
+  text-align: center;
+  padding: 0.3rem;
+  font-family: jost;
+  font-weight: 400;
+  position: sticky;
+  bottom: 0; }
