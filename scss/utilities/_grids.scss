@@ -10,7 +10,6 @@
       display: block;
       justify-items: center;
       align-self: center;
-      padding-left: 3rem;
    }
    .foto1{
       grid-area: foto1;
@@ -41,8 +40,9 @@
       }
       main{
          grid-area: main;
-            display: flex;
-            flex-direction: column;
+         display: flex;
+         flex-direction: column;
+         padding: 4rem 0rem 0rem 2rem;
          div{
             #tituloProyectos{
                display: flex;
@@ -79,8 +79,118 @@
    }   
 
 
-
-
 footer{
    grid-area: footer;
 }
+
+
+
+//container contacto
+
+.gridContacto{
+   display: grid;
+   height: 80vh;
+   grid-template-areas: "contactos formulario";
+   padding: 5rem;
+   .contactos{
+      grid-template-areas: contactos;
+      justify-content: end;
+   }
+   .containerContacto{
+      grid-template-areas: formulario;
+      h1{
+         padding: 1rem 0rem;
+      }
+      .formulario{
+         border: none;
+         background-color: transparent;
+         resize: none;
+         outline: none;
+         div{
+            padding:0rem 2rem 2rem 0rem;
+            .campo{
+               display: block;
+               border-top-style: none;
+               border-right-style: none;
+               border-left-style: none;
+               border-bottom: solid 1px $color-negro;
+               font-family: Montserrat ;
+               font-size: 14px;
+               height: 25px;
+               width: 500px;
+            }
+         }
+         .botonEnviar{
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid $color-negro;
+            border-radius: 150px;
+            padding: 10px 20px 10px 20px;
+            font-family: jost,sans-serif;
+            font-weight: 400 ;
+            color: #0C0C0C;
+            font-size: 16px;
+            text-transform: uppercase;
+            justify-self: end;
+         }
+      }
+   }
+}
+
+//grid sobre
+
+main{
+   .gridSobre{
+      padding: 6rem 0rem 0rem 2rem;
+      display: grid;
+      grid-column-gap: 1rem; 
+      grid-template-areas: "foto container";
+      margin-top: 1rem;
+      justify-content: center;
+      .fotoPresentación{
+         grid-template-areas: foto;
+         display: block;
+         justify-items: center;
+         align-self: center;
+         padding-left: 30rem;
+      }
+      .containerSobre{
+         grid-template-areas: container;
+         display: block;
+         justify-items: center;
+         align-self: center;
+         padding-left: 3rem;
+         width: 640px;
+      }
+   }
+}
+
+
+
+//grid proyecto
+
+main{
+   .gridProyecto1{
+      display: grid;
+      grid-column-gap: 1rem; 
+      grid-template-areas: "info carousel";
+      margin-top: 1rem;
+      justify-self: center;
+      gap: 10rem;
+      .infoProUno{
+         grid-template-areas: info;
+         display: block;
+         align-self: center;
+         justify-content: center;
+         width: 400px;
+         margin-left: 8rem;
+      }
+      .carousel{
+         grid-template-areas: carousel;
+         display: block;
+         justify-content: end;
+         padding: 3rem;
+      }
+   }
+   
+}
+

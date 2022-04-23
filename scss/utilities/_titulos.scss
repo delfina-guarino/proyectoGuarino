@@ -2,37 +2,41 @@
    font-family: degular,sans-serif;
    font-weight: 400;
    font-style: normal;
-   color: #0C0C0C;
+   color: $color-negro;
    font-size: 5rem;
    display: flex;
    justify-items: center;
+   padding: 3rem 0rem;
 }
 
 .h2{
    font-family: degular,sans-serif;
    font-weight: 400;
    font-style: normal;
-   color: #0C0C0C;
+   color: $color-negro;
    font-size: 3rem;
+   padding: 1rem 0rem;
 }
 
 .h4{
    font-family: jost,sans-serif;
    font-weight: 300 ;
-   color: #0C0C0C;
+   color: $color-negro;
    font-size: 1.25rem;
    text-transform: uppercase;
+   padding: 0.5rem 0rem;
 }
 
 .h5{
    font-family: jost,sans-serif;
    font-weight: 400 ;
-   color: #0C0C0C;
+   color: $color-negro;
    font-size: 1rem;
    text-transform: uppercase;
+   padding: 0.5rem 0rem;
 }
 
-.body{
+body{
    font: normal 16px Montserrat;
    margin: 0px 20px 20px 0px;
    line-height: 28px;
@@ -46,10 +50,12 @@
       div{
          .tituloProyecto{
             font: 400 16px Jost;
-            color: #0C0C0C;
+            color: $color-negro;
             text-transform: uppercase;
             text-decoration: none;
          }
       }
    }
 }
+
+//titulo sobre mi
