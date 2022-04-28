@@ -2,3 +2,35 @@
 
 $color-principal: #f5ac58;
 $color-negro: #2C2C2C;
+
+// mixins
+@mixin flexCol{
+   display: flex;
+   flex-direction: column;
+}
+
+@mixin flexRow{
+   display: flex;
+   flex-direction: row;
+}
+
+@mixin flexJustCenter{
+   display: flex;
+   justify-content: center;
+}
+
+//mapa
+
+$boton: (
+   bg-boton: #ffffff,
+   border-boton: 1px solid #2C2C2C,
+   border-radius-boton: 150px,
+   padding-boton: 10px 20px 10px 20px,
+);
+
+//extend
+
+%block{
+   display: block;
+};
+  

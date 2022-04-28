@@ -7,21 +7,21 @@
    margin-top: 1rem;
    .tituloLanding{
       grid-area: titulo;
-      display: block;
+      @extend %block;
       justify-items: center;
       align-self: center;
    }
    .foto1{
       grid-area: foto1;
-      display: block;
+      @extend %block;
    }
    .foto2{
       grid-area: foto2;
-      display: block;
+      @extend %block;
    }
    .foto3{
       grid-area: foto3;
-      display: block;
+      @extend %block;
    }
 }
 
@@ -33,46 +33,40 @@
       grid-template-areas: "header header header"
                            "main main main"
                            "footer footer footer" ;
-      grid-template-rows: 0.2fr 2fr 0.2fr;
+      grid-template-rows: 0.2fr 1.8fr 0fr;
       header{
          grid-area: header;
          width: auto;
       }
       main{
          grid-area: main;
-         display: flex;
-         flex-direction: column;
-         padding: 4rem 0rem 0rem 2rem;
+         @include flexCol;
+         padding-top: 2rem;
          div{
             #tituloProyectos{
-               display: flex;
-               justify-content: center;
+               @include flexJustCenter;
                padding: 2rem;
             }
          }
          .containerCards{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
+            @include flexRow;
+            @include flexJustCenter;
             #animacionCard{
                &:hover{
                   transform: scale(1.1);
                } 
             }
             .proyectoCard1{
-               display: flex;
-               flex-direction: column;
-               margin: 30px;
+               @include flexCol;
+               margin: 20px;
             }
             .proyectoCard2{
-               display: flex;
-               flex-direction: column;
-               margin: 30px;
+               @include flexCol;
+               margin: 20px;
             }
             .proyectoCard3{
-               display: flex;
-               flex-direction: column;
-               margin: 30px;
+               @include flexCol;
+               margin: 20px;
             }
          }
       }
@@ -109,7 +103,7 @@ footer{
          div{
             padding:0rem 2rem 2rem 0rem;
             .campo{
-               display: block;
+               @extend %block;
                border-top-style: none;
                border-right-style: none;
                border-left-style: none;
@@ -121,16 +115,15 @@ footer{
             }
          }
          .botonEnviar{
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            border: 1px solid $color-negro;
-            border-radius: 150px;
-            padding: 10px 20px 10px 20px;
+            background-color: map-get($map: $boton, $key: bg-boton);
+            border: map-get($map: $boton, $key: border-boton);
+            border-radius: map-get($map: $boton, $key: border-radius-boton);
+            padding: map-get($map: $boton, $key: padding-boton);
             font-family: jost,sans-serif;
             font-weight: 400 ;
             color: #0C0C0C;
             font-size: 16px;
             text-transform: uppercase;
-            justify-self: end;
          }
       }
    }
@@ -148,14 +141,14 @@ main{
       justify-content: center;
       .fotoPresentación{
          grid-template-areas: foto;
-         display: block;
+         @extend %block;
          justify-items: center;
          align-self: center;
          padding-left: 30rem;
       }
       .containerSobre{
          grid-template-areas: container;
-         display: block;
+         @extend %block;
          justify-items: center;
          align-self: center;
          padding-left: 3rem;
@@ -178,7 +171,7 @@ main{
       gap: 10rem;
       .infoProUno{
          grid-template-areas: info;
-         display: block;
+         @extend %block;
          align-self: center;
          justify-content: center;
          width: 400px;
@@ -186,7 +179,7 @@ main{
       }
       .carousel{
          grid-template-areas: carousel;
-         display: block;
+         @extend %block;
          justify-content: end;
          padding: 3rem;
       }

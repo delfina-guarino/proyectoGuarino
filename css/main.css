@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.containerMain .tituloLanding, .containerMain .foto1, .containerMain .foto2, .containerMain .foto3, .gridContacto .containerContacto .formulario div .campo, main .gridSobre .fotoPresentación, main .gridSobre .containerSobre, main .gridProyecto1 .infoProUno, main .gridProyecto1 .carousel, body main .tituloLanding {
+  display: block; }
+
 .h1 {
   font-family: degular,sans-serif;
   font-weight: 400;
@@ -53,25 +56,21 @@ body {
   margin-top: 1rem; }
   .containerMain .tituloLanding {
     grid-area: titulo;
-    display: block;
     justify-items: center;
     align-self: center; }
   .containerMain .foto1 {
-    grid-area: foto1;
-    display: block; }
+    grid-area: foto1; }
   .containerMain .foto2 {
-    grid-area: foto2;
-    display: block; }
+    grid-area: foto2; }
   .containerMain .foto3 {
-    grid-area: foto3;
-    display: block; }
+    grid-area: foto3; }
 
 .gridProyectos {
   display: grid;
   height: 100vh;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "header header header" "main main main" "footer footer footer";
-  grid-template-rows: 0.2fr 2fr 0.2fr; }
+  grid-template-rows: 0.2fr 1.8fr 0fr; }
   .gridProyectos header {
     grid-area: header;
     width: auto; }
@@ -79,7 +78,7 @@ body {
     grid-area: main;
     display: flex;
     flex-direction: column;
-    padding: 4rem 0rem 0rem 2rem; }
+    padding-top: 2rem; }
     .gridProyectos main div #tituloProyectos {
       display: flex;
       justify-content: center;
@@ -87,21 +86,22 @@ body {
     .gridProyectos main .containerCards {
       display: flex;
       flex-direction: row;
+      display: flex;
       justify-content: center; }
       .gridProyectos main .containerCards #animacionCard:hover {
         transform: scale(1.1); }
       .gridProyectos main .containerCards .proyectoCard1 {
         display: flex;
         flex-direction: column;
-        margin: 30px; }
+        margin: 20px; }
       .gridProyectos main .containerCards .proyectoCard2 {
         display: flex;
         flex-direction: column;
-        margin: 30px; }
+        margin: 20px; }
       .gridProyectos main .containerCards .proyectoCard3 {
         display: flex;
         flex-direction: column;
-        margin: 30px; }
+        margin: 20px; }
 
 footer {
   grid-area: footer; }
@@ -126,7 +126,6 @@ footer {
       .gridContacto .containerContacto .formulario div {
         padding: 0rem 2rem 2rem 0rem; }
         .gridContacto .containerContacto .formulario div .campo {
-          display: block;
           border-top-style: none;
           border-right-style: none;
           border-left-style: none;
@@ -136,7 +135,7 @@ footer {
           height: 25px;
           width: 500px; }
       .gridContacto .containerContacto .formulario .botonEnviar {
-        background: #FFFFFF 0% 0% no-repeat padding-box;
+        background-color: #ffffff;
         border: 1px solid #2C2C2C;
         border-radius: 150px;
         padding: 10px 20px 10px 20px;
@@ -144,8 +143,7 @@ footer {
         font-weight: 400;
         color: #0C0C0C;
         font-size: 16px;
-        text-transform: uppercase;
-        justify-self: end; }
+        text-transform: uppercase; }
 
 main .gridSobre {
   padding: 6rem 0rem 0rem 2rem;
@@ -156,13 +154,11 @@ main .gridSobre {
   justify-content: center; }
   main .gridSobre .fotoPresentación {
     grid-template-areas: foto;
-    display: block;
     justify-items: center;
     align-self: center;
     padding-left: 30rem; }
   main .gridSobre .containerSobre {
     grid-template-areas: container;
-    display: block;
     justify-items: center;
     align-self: center;
     padding-left: 3rem;
@@ -177,14 +173,12 @@ main .gridProyecto1 {
   gap: 10rem; }
   main .gridProyecto1 .infoProUno {
     grid-template-areas: info;
-    display: block;
     align-self: center;
     justify-content: center;
     width: 400px;
     margin-left: 8rem; }
   main .gridProyecto1 .carousel {
     grid-template-areas: carousel;
-    display: block;
     justify-content: end;
     padding: 3rem; }
 
@@ -225,7 +219,6 @@ body {
   margin-top: 3rem; }
   body main .tituloLanding {
     grid-area: titulo;
-    display: block;
     justify-items: center;
     align-self: center;
     padding-left: 3rem; }

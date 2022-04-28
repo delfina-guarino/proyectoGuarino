@@ -61,7 +61,7 @@ body{
    
       .tituloLanding{
          grid-area: titulo;
-         display: block;
+         @extend %block;
          justify-items: center;
          align-self: center;
          padding-left: 3rem;
