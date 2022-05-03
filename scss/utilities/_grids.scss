@@ -143,8 +143,6 @@
             }
          }
       }   
-
-
    footer{
       grid-area: footer;
    }
@@ -152,7 +150,69 @@
 
 //VISTA MOBILE PORTFOLIO
 @media only screen and (max-width: 767px){
-   
+   .gridProyectos{
+      display: grid;
+      height: 100vh;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "header header header"
+                           "main main main"
+                           "footer footer footer" ;
+      grid-template-rows: 0.2fr 1.8fr 0fr;
+
+      header{
+         grid-area: header;
+         width: auto;
+      }
+      main{
+         grid-area: main;
+         @include flexCol;
+         padding-top: 2rem;
+         @include flexJustCenter;
+         align-items: center;                     
+         justify-self: center; 
+         div{
+            #tituloProyectos{
+               @include flexJustCenter;
+               padding: 2rem;
+            }
+         }
+         .containerCards{
+            @include flexCol;
+            @include flexJustCenter;
+            .proyectoCard1{
+               @include flexCol;
+               margin: 20px;
+               img{
+                  height: 200px;
+                  width: 400px;
+                  object-fit: cover;
+               }               
+            }
+            .proyectoCard2{
+               @include flexCol;
+               margin: 20px;
+               img{
+                  height: 200px;
+                  width: 400px;
+                  object-fit: cover;
+               }
+            }
+            .proyectoCard3{
+               @include flexCol;
+               margin: 20px;
+               img{
+                  height: 200px;
+                  width: 400px;
+                  object-fit: cover;
+               }
+            }
+         }
+      }
+   }   
+   footer{
+      grid-area: footer;
+   }
+
 }
 
 
@@ -160,7 +220,6 @@
 //CONTACTO
 
 //VISTA DESKTOP CONTACTO
-
 @media only screen and (min-width: 1024px){
    .gridContacto{
       display: grid;
@@ -218,9 +277,7 @@
    }
 }
 
-
 //VISTA MOBILE CONTACTO
-
 @media only screen and (max-width: 767px){
    .gridContacto{
       display: grid;
@@ -299,13 +356,9 @@
 }
 
 
-
-
-
-
 //SOBRE MI
 
-//VISTA DESKTOP
+//VISTA DESKTOP SOBRE MI
 @media only screen and (min-width: 1024px){
    main{
       .gridSobre{
@@ -338,8 +391,7 @@
    }
 }
 
-
-//VISTA MOBILE
+//VISTA MOBILE SOBRE MI
 @media only screen and (max-width: 767px){
    main{
       .gridSobre{
@@ -374,36 +426,34 @@
 }
 
 
+//PROYECTO 1
 
-
-
-
-
-//grid proyecto
-
-main{
-   .gridProyecto1{
-      min-height: 100%;
-      display: grid;
-      grid-column-gap: 1rem; 
-      grid-template-areas: "info carousel";
-      margin-top: 1rem;
-      justify-self: center;
-      gap: 10rem;
-      .infoProUno{
-         grid-template-areas: info;
-         @extend %block;
-         align-self: center;
-         justify-content: center;
-         width: 400px;
-         margin-left: 8rem;
+//VISTA DESKTOP PROYECTO 1
+@media only screen and (min-width: 1024px){
+   main{
+      .gridProyecto1{
+         min-height: 100%;
+         display: grid;
+         grid-column-gap: 1rem; 
+         grid-template-areas: "info carousel";
+         margin-top: 1rem;
+         justify-self: center;
+         gap: 10rem;
+         .infoProUno{
+            grid-template-areas: info;
+            display: block;
+            align-self: center;
+            justify-content: center;
+            width: 30rem;
+            margin-left: 8rem;
+         }
+         .carousel{
+            grid-template-areas: carousel;
+            display: block;
+            justify-content: end;
+            padding: 3rem;
+         }
       }
-      .carousel{
-         grid-template-areas: carousel;
-         @extend %block;
-         justify-content: end;
-         padding: 3rem;
-      }
+      
    }
-   
 }
