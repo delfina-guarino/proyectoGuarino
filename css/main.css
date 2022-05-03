@@ -1,6 +1,11 @@
 @charset "UTF-8";
-.gridContacto .containerContacto .formulario div .campo, main .gridSobre .fotoPresentación, main .gridSobre .containerSobre, main .gridProyecto1 .infoProUno, main .gridProyecto1 .carousel, body main .tituloLanding {
+main .gridProyecto1 .infoProUno, main .gridProyecto1 .carousel, body main .tituloLanding {
   display: block; }
+
+.botonEnviar:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px); }
 
 .h1 {
   font-family: degular,sans-serif;
@@ -9,8 +14,7 @@
   color: #2C2C2C;
   font-size: 5rem;
   display: flex;
-  justify-items: center;
-  padding: 3rem 0rem; }
+  justify-items: center; }
 
 .h2 {
   font-family: degular,sans-serif;
@@ -38,8 +42,7 @@
 
 p {
   font: normal 16px Montserrat;
-  margin: 0px 20px 20px 0px;
-  line-height: 28px; }
+  line-height: 18px; }
 
 .gridProyectos main div .tituloProyecto {
   font: 400 16px Jost;
@@ -49,14 +52,22 @@ p {
 
 @media only screen and (min-width: 1024px) {
   .containerMain {
-    display: flex;
-    gap: 5rem;
-    padding: 1rem; }
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1rem;
+    grid-template-areas: "titulo foto1 foto2 foto3";
+    align-content: space-between;
+    margin: 2.5rem 0rem 2rem 0rem;
+    width: auto; }
     .containerMain .tituloLanding {
       grid-area: titulo;
       display: block;
-      justify-items: center;
+      justify-items: end;
       align-self: center; }
+      .containerMain .tituloLanding h1 {
+        justify-content: end; }
+      .containerMain .tituloLanding .h1 {
+        padding-right: 0.5rem; }
     .containerMain .foto1 {
       grid-area: foto1;
       display: block; }
@@ -75,7 +86,7 @@ p {
     min-width: 100%;
     column-gap: 1rem;
     grid-template-areas: "titulo titulo" "foto1 foto1" "foto2 foto2" "foto3 foto3" "footer footer";
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     justify-self: center; }
     .containerMain .tituloLanding {
@@ -105,103 +116,197 @@ p {
         width: 400px;
         object-fit: cover; } }
 
-.gridProyectos {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "header header header" "main main main" "footer footer footer";
-  grid-template-rows: 0.2fr 1.8fr 0fr; }
-  .gridProyectos header {
-    grid-area: header;
-    width: auto; }
-  .gridProyectos main {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    padding-top: 2rem; }
-    .gridProyectos main div #tituloProyectos {
+@media only screen and (min-width: 1024px) {
+  .gridProyectos {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+    grid-template-rows: 0.2fr 1.8fr 0fr; }
+    .gridProyectos header {
+      grid-area: header;
+      width: auto; }
+    .gridProyectos main {
+      grid-area: main;
       display: flex;
-      justify-content: center;
-      padding: 2rem; }
-    .gridProyectos main .containerCards {
-      display: flex;
-      flex-direction: row;
-      display: flex;
-      justify-content: center; }
-      .gridProyectos main .containerCards #animacionCard:hover {
-        transform: scale(1.1); }
-      .gridProyectos main .containerCards .proyectoCard1 {
+      flex-direction: column;
+      padding-top: 2rem; }
+      .gridProyectos main div #tituloProyectos {
         display: flex;
-        flex-direction: column;
-        margin: 20px; }
-      .gridProyectos main .containerCards .proyectoCard2 {
+        justify-content: center;
+        padding: 2rem; }
+      .gridProyectos main .containerCards {
         display: flex;
-        flex-direction: column;
-        margin: 20px; }
-      .gridProyectos main .containerCards .proyectoCard3 {
+        flex-direction: row;
         display: flex;
-        flex-direction: column;
-        margin: 20px; }
+        justify-content: center; }
+        .gridProyectos main .containerCards #animacionCard:hover {
+          transform: scale(1.1); }
+        .gridProyectos main .containerCards .proyectoCard1 {
+          display: flex;
+          flex-direction: column;
+          margin: 20px; }
+        .gridProyectos main .containerCards .proyectoCard2 {
+          display: flex;
+          flex-direction: column;
+          margin: 20px; }
+        .gridProyectos main .containerCards .proyectoCard3 {
+          display: flex;
+          flex-direction: column;
+          margin: 20px; }
+  footer {
+    grid-area: footer; } }
 
-footer {
-  grid-area: footer; }
+@media only screen and (min-width: 1024px) {
+  .gridContacto {
+    display: grid;
+    grid-template-areas: "contactos formulario";
+    padding: 5rem; }
+    .gridContacto .contactos {
+      grid-template-areas: contactos;
+      justify-content: end; }
+    .gridContacto .containerContacto {
+      grid-template-areas: formulario; }
+      .gridContacto .containerContacto h1 {
+        padding: 1rem 0rem; }
+      .gridContacto .containerContacto .formulario {
+        border: none;
+        background-color: transparent;
+        resize: none;
+        outline: none; }
+        .gridContacto .containerContacto .formulario div {
+          padding: 0rem 2rem 2rem 0rem; }
+          .gridContacto .containerContacto .formulario div .campo {
+            display: block;
+            border-top-style: none;
+            border-right-style: none;
+            border-left-style: none;
+            border-bottom: solid 1px #2C2C2C;
+            font-family: Montserrat;
+            font-size: 1rem;
+            height: 2rem;
+            width: 32rem; }
+        .gridContacto .containerContacto .formulario .botonEnviar {
+          background-color: #ffffff;
+          border: 1px solid #2C2C2C;
+          border-radius: 150px;
+          padding: 10px 20px 10px 20px;
+          font-family: jost,sans-serif;
+          font-weight: 400;
+          color: #0C0C0C;
+          font-size: 16px;
+          text-transform: uppercase; }
+          .gridContacto .containerContacto .formulario .botonEnviar .botonEnviar:active {
+            background-color: #3e8e41;
+            box-shadow: 1 2px #d8d8d8;
+            transform: translateY(4px); }
+          .gridContacto .containerContacto .formulario .botonEnviar .botonEnviar:hover {
+            background-color: #e6e6e6; } }
 
-.gridContacto {
-  display: grid;
-  grid-template-areas: "contactos formulario";
-  padding: 5rem; }
-  .gridContacto .contactos {
+@media only screen and (max-width: 767px) {
+  .gridContacto {
+    display: grid;
+    grid-template-areas: "formulario" "contactos";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    min-height: 100vh;
+    min-width: 100%;
+    justify-items: center;
+    align-items: center;
+    justify-self: center;
+    margin-top: 1rem; }
+  .contactos {
     grid-template-areas: contactos;
-    justify-content: end; }
-  .gridContacto .containerContacto {
-    grid-template-areas: formulario; }
-    .gridContacto .containerContacto h1 {
-      padding: 1rem 0rem; }
-    .gridContacto .containerContacto .formulario {
-      border: none;
-      background-color: transparent;
-      resize: none;
-      outline: none; }
-      .gridContacto .containerContacto .formulario div {
-        padding: 0rem 2rem 2rem 0rem; }
-        .gridContacto .containerContacto .formulario div .campo {
-          border-top-style: none;
-          border-right-style: none;
-          border-left-style: none;
-          border-bottom: solid 1px #2C2C2C;
-          font-family: Montserrat;
-          font-size: 14px;
-          height: 25px;
-          width: 500px; }
-      .gridContacto .containerContacto .formulario .botonEnviar {
-        background-color: #ffffff;
-        border: 1px solid #2C2C2C;
-        border-radius: 150px;
-        padding: 10px 20px 10px 20px;
-        font-family: jost,sans-serif;
-        font-weight: 400;
-        color: #0C0C0C;
-        font-size: 16px;
-        text-transform: uppercase; }
+    justify-items: end;
+    gap: 2rem;
+    display: flex; }
+    .contactos div .body {
+      display: none; }
+    .contactos div a {
+      text-decoration: none; }
+  .containerContacto {
+    grid-template-areas: formulario;
+    justify-content: center; }
+  .formulario {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none; }
+  .campo {
+    display: block;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom: solid 1px #444343;
+    font-family: Montserrat;
+    font-size: 14px;
+    height: 25px;
+    width: 280px; }
+  .input {
+    padding: 0.8rem; }
+  .botonEnviar {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #2C2C2C;
+    border-radius: 150px;
+    padding: 10px 20px 10px 20px;
+    font-family: jost,sans-serif;
+    font-weight: 400;
+    color: #0C0C0C;
+    font-size: 16px;
+    text-transform: uppercase;
+    justify-content: end;
+    margin: 1rem; } }
 
-main .gridSobre {
-  padding: 6rem 0rem 0rem 2rem;
-  display: grid;
-  grid-column-gap: 1rem;
-  grid-template-areas: "foto container";
-  margin-top: 1rem;
-  justify-content: center; }
-  main .gridSobre .fotoPresentación {
-    grid-template-areas: foto;
+@media only screen and (min-width: 1024px) {
+  main .gridSobre {
+    padding: 2rem 0rem 0rem 2rem;
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-areas: "foto container";
+    height: 80vh;
+    justify-content: center;
+    align-items: center; }
+    main .gridSobre .fotoPresentación {
+      grid-template-areas: foto;
+      display: block;
+      justify-items: center;
+      align-self: center;
+      padding-left: 30rem;
+      height: 200px;
+      width: 400px;
+      object-fit: cover; }
+    main .gridSobre .containerSobre {
+      grid-template-areas: container;
+      display: block;
+      justify-items: center;
+      align-self: center;
+      padding-left: 3rem;
+      width: 640px; } }
+
+@media only screen and (max-width: 767px) {
+  main .gridSobre {
+    display: grid;
+    grid-template-areas: "foto" "container";
+    min-height: 100vh;
+    min-width: 100%;
     justify-items: center;
-    align-self: center;
-    padding-left: 30rem; }
-  main .gridSobre .containerSobre {
-    grid-template-areas: container;
-    justify-items: center;
-    align-self: center;
-    padding-left: 3rem;
-    width: 640px; }
+    align-items: center;
+    justify-self: center;
+    margin-top: 1rem; }
+    main .gridSobre .fotoPresentación {
+      grid-template-areas: foto;
+      display: block;
+      justify-items: center;
+      align-self: center;
+      padding-left: 30rem; }
+    main .gridSobre .containerSobre {
+      grid-template-areas: container;
+      display: block;
+      justify-items: center;
+      align-self: center;
+      padding-left: 3rem; }
+      main .gridSobre .containerSobre p {
+        margin: 1rem 1rem 1rem 0rem; } }
 
 main .gridProyecto1 {
   min-height: 100%;
@@ -227,24 +332,11 @@ main .gridProyecto1 {
   padding: 0%;
   box-sizing: border-box; }
 
-html {
-  height: 100%;
-  width: 100%; }
-
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #ffffff;
-  position: sticky;
-  z-index: 1;
-  border-bottom: solid 2px #2C2C2C;
-  height: 8vh;
-  padding: 0rem 1rem 2rem 5rem;
-  width: 100%; }
+  border-bottom: solid 2px #2C2C2C; }
   header .logo {
-    height: 3.2rem;
-    padding: 0rem; }
+    height: 3.2rem; }
   header nav ul li {
     font: normal normal normal 1rem Jost;
     list-style: none;
@@ -256,8 +348,8 @@ header {
       text-decoration: none; }
 
 body {
-  align-content: center;
-  margin-top: 3rem; }
+  align-self: center;
+  min-height: 100%; }
   body main .tituloLanding {
     grid-area: titulo;
     justify-items: center;
@@ -276,11 +368,18 @@ body {
 footer {
   background-color: #f5ac58;
   background-color: #f5ac58;
-  text-align: center;
-  padding: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   font-family: jost;
   font-weight: 400;
   position: relative;
   width: 100%;
-  height: 4rem;
-  margin-top: 1rem; }
+  height: 6rem;
+  margin-top: 1rem;
+  bottom: 0;
+  left: 0;
+  right: 0; }

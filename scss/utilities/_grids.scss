@@ -4,14 +4,24 @@
 
 @media only screen and (min-width: 1024px){
    .containerMain{
-      display: flex;
-      gap: 5rem;
-      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 1rem; 
+      grid-template-areas: "titulo foto1 foto2 foto3";
+      align-content: space-between;
+      margin: 2.5rem 0rem 2rem 0rem;
+      width: auto;
       .tituloLanding{
          grid-area: titulo;
          display: block;
-         justify-items: center;
+         justify-items: end;
          align-self: center;
+         h1{
+            justify-content: end;
+         }
+         .h1{
+            padding-right: 0.5rem;
+         }
       }
       .foto1{
          grid-area: foto1;
@@ -28,7 +38,7 @@
    }
 }
 
-//VISTA Mobile INDEX
+//VISTA MOBILE INDEX
 @media only screen and (max-width: 767px){
    .containerMain{
       display: grid;
@@ -41,7 +51,7 @@
                            "foto2 foto2"
                            "foto3 foto3"
                            "footer footer";
-      justify-content: center;
+      justify-items: center;
       align-items: center;                     
       justify-self: center;   
 
@@ -84,153 +94,288 @@
 
 
 
+//PORTFOLIO
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.gridProyectos{
-      display: grid;
-      height: 100vh;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: "header header header"
-                           "main main main"
-                           "footer footer footer" ;
-      grid-template-rows: 0.2fr 1.8fr 0fr;
-      header{
-         grid-area: header;
-         width: auto;
-      }
-      main{
-         grid-area: main;
-         @include flexCol;
-         padding-top: 2rem;
-         div{
-            #tituloProyectos{
+//VISTA DESKTOP PORTFOLIO
+@media only screen and (min-width:1024px){
+   .gridProyectos{
+         display: grid;
+         height: 100vh;
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-areas: "header header header"
+                              "main main main"
+                              "footer footer footer" ;
+         grid-template-rows: 0.2fr 1.8fr 0fr;
+         header{
+            grid-area: header;
+            width: auto;
+         }
+         main{
+            grid-area: main;
+            @include flexCol;
+            padding-top: 2rem;
+            div{
+               #tituloProyectos{
+                  @include flexJustCenter;
+                  padding: 2rem;
+               }
+            }
+            .containerCards{
+               @include flexRow;
                @include flexJustCenter;
-               padding: 2rem;
+               #animacionCard{
+                  &:hover{
+                     transform: scale(1.1);
+                  } 
+               }
+               .proyectoCard1{
+                  @include flexCol;
+                  margin: 20px;
+               }
+               .proyectoCard2{
+                  @include flexCol;
+                  margin: 20px;
+               }
+               .proyectoCard3{
+                  @include flexCol;
+                  margin: 20px;
+               }
             }
          }
-         .containerCards{
-            @include flexRow;
-            @include flexJustCenter;
-            #animacionCard{
-               &:hover{
-                  transform: scale(1.1);
-               } 
-            }
-            .proyectoCard1{
-               @include flexCol;
-               margin: 20px;
-            }
-            .proyectoCard2{
-               @include flexCol;
-               margin: 20px;
-            }
-            .proyectoCard3{
-               @include flexCol;
-               margin: 20px;
-            }
-         }
-      }
-   }   
+      }   
 
 
-footer{
-   grid-area: footer;
+   footer{
+      grid-area: footer;
+   }
+}
+
+//VISTA MOBILE PORTFOLIO
+@media only screen and (max-width: 767px){
+   
 }
 
 
 
-//container contacto
+//CONTACTO
 
-.gridContacto{
-   display: grid;
-   grid-template-areas: "contactos formulario";
-   padding: 5rem;
+//VISTA DESKTOP CONTACTO
+
+@media only screen and (min-width: 1024px){
+   .gridContacto{
+      display: grid;
+      grid-template-areas: "contactos formulario";
+      padding: 5rem;
+      .contactos{
+         grid-template-areas: contactos;
+         justify-content: end;
+      }
+      .containerContacto{
+         grid-template-areas: formulario;
+         h1{
+            padding: 1rem 0rem;
+         }
+         .formulario{
+            border: none;
+            background-color: transparent;
+            resize: none;
+            outline: none;
+            div{
+               padding:0rem 2rem 2rem 0rem;
+               .campo{
+                  display: block;
+                  border-top-style: none;
+                  border-right-style: none;
+                  border-left-style: none;
+                  border-bottom: solid 1px $color-negro;
+                  font-family: Montserrat ;
+                  font-size: 1rem;
+                  height: 2rem;
+                  width: 32rem;
+               }
+            }
+            .botonEnviar{
+               background-color: map-get($map: $boton, $key: bg-boton);
+               border: map-get($map: $boton, $key: border-boton);
+               border-radius: map-get($map: $boton, $key: border-radius-boton);
+               padding: map-get($map: $boton, $key: padding-boton);
+               font-family: jost,sans-serif;
+               font-weight: 400 ;
+               color: #0C0C0C;
+               font-size: 16px;
+               text-transform: uppercase;
+               .botonEnviar:active {
+                  background-color: #3e8e41;
+                  box-shadow: 1 2px #d8d8d8;
+                  transform: translateY(4px);
+               }
+               .botonEnviar:hover {
+                  background-color: #e6e6e6;
+               }
+            }
+         }
+      }
+   }
+}
+
+
+//VISTA MOBILE CONTACTO
+
+@media only screen and (max-width: 767px){
+   .gridContacto{
+      display: grid;
+      grid-template-areas: "formulario"
+                           "contactos";
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.1fr 1fr;
+      min-height: 100vh;
+      min-width: 100%;
+      justify-items: center;
+      align-items: center;
+      justify-self: center;
+      margin-top: 1rem;
+   }
+
    .contactos{
       grid-template-areas: contactos;
-      justify-content: end;
+      justify-items: end;
+      gap: 2rem;
+      display: flex;
+      div{
+         .body{
+           display: none;   
+         }
+         a{
+            text-decoration: none;
+         }
+      }
    }
+
    .containerContacto{
       grid-template-areas: formulario;
-      h1{
-         padding: 1rem 0rem;
+      justify-content: center;
+   }
+
+   .formulario{
+      border: none;
+      background-color: transparent;
+      resize: none;
+      outline: none;
+   }
+
+   .campo{
+      display: block;
+      border-top-style: none;
+      border-right-style: none;
+      border-left-style: none;
+      border-bottom: solid 1px #444343;
+      font-family: Montserrat ;
+      font-size: 14px;
+      height: 25px;
+      width: 280px;
+   }   
+   
+   .input{
+      padding: 0.8rem;
+   }
+
+   .botonEnviar{
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #2C2C2C;
+      border-radius: 150px;
+      padding: 10px 20px 10px 20px;
+      font-family: jost,sans-serif;
+      font-weight: 400 ;
+      color: #0C0C0C;
+      font-size: 16px;
+      text-transform: uppercase;
+      justify-content: end;
+      margin: 1rem;
+   }
+
+   
+
+
+}
+
+
+
+
+
+
+//SOBRE MI
+
+//VISTA DESKTOP
+@media only screen and (min-width: 1024px){
+   main{
+      .gridSobre{
+         padding: 2rem 0rem 0rem 2rem;
+         display: grid;
+         grid-column-gap: 1rem; 
+         grid-template-areas: "foto container";
+         height: 80vh;
+         justify-content: center;
+         align-items: center;
+         .fotoPresentación{
+            grid-template-areas: foto;
+            display: block;
+            justify-items: center;
+            align-self: center;
+            padding-left: 30rem;
+            height: 200px;
+            width: 400px;
+            object-fit: cover;
+         }
+         .containerSobre{
+            grid-template-areas: container;
+            display: block;
+            justify-items: center;
+            align-self: center;
+            padding-left: 3rem;
+            width: 640px;
+         }
       }
-      .formulario{
-         border: none;
-         background-color: transparent;
-         resize: none;
-         outline: none;
-         div{
-            padding:0rem 2rem 2rem 0rem;
-            .campo{
-               @extend %block;
-               border-top-style: none;
-               border-right-style: none;
-               border-left-style: none;
-               border-bottom: solid 1px $color-negro;
-               font-family: Montserrat ;
-               font-size: 14px;
-               height: 25px;
-               width: 500px;
+   }
+}
+
+
+//VISTA MOBILE
+@media only screen and (max-width: 767px){
+   main{
+      .gridSobre{
+         display: grid;
+         grid-template-areas: "foto"
+                              "container";
+         min-height: 100vh;
+         min-width: 100%;
+         justify-items: center;
+         align-items: center;
+         justify-self: center;
+         margin-top: 1rem;
+         .fotoPresentación{
+            grid-template-areas: foto;
+            display: block;
+            justify-items: center;
+            align-self: center;
+            padding-left: 30rem;
+         }
+         .containerSobre{
+            grid-template-areas: container;
+            display: block;
+            justify-items: center;
+            align-self: center;
+            padding-left: 3rem;
+            p{
+               margin: 1rem 1rem 1rem 0rem;
             }
          }
-         .botonEnviar{
-            background-color: map-get($map: $boton, $key: bg-boton);
-            border: map-get($map: $boton, $key: border-boton);
-            border-radius: map-get($map: $boton, $key: border-radius-boton);
-            padding: map-get($map: $boton, $key: padding-boton);
-            font-family: jost,sans-serif;
-            font-weight: 400 ;
-            color: #0C0C0C;
-            font-size: 16px;
-            text-transform: uppercase;
-         }
       }
    }
 }
 
-//grid sobre
 
-main{
-   .gridSobre{
-      padding: 6rem 0rem 0rem 2rem;
-      display: grid;
-      grid-column-gap: 1rem; 
-      grid-template-areas: "foto container";
-      margin-top: 1rem;
-      justify-content: center;
-      .fotoPresentación{
-         grid-template-areas: foto;
-         @extend %block;
-         justify-items: center;
-         align-self: center;
-         padding-left: 30rem;
-      }
-      .containerSobre{
-         grid-template-areas: container;
-         @extend %block;
-         justify-items: center;
-         align-self: center;
-         padding-left: 3rem;
-         width: 640px;
-      }
-   }
-}
+
+
 
 
 
@@ -262,4 +407,3 @@ main{
    }
    
 }
-
