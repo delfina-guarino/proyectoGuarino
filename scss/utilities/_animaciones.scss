@@ -1,3 +1,6 @@
+//INDEX
+
+//VISTA DESKTOP INDEX
 @media only screen and (min-width: 1024px){
    .containerMain{
       height: 92vh;      
@@ -5,12 +8,6 @@
       justify-content: center;
       overflow: hidden;
       .animacionIndex{
-         display: grid;
-         grid-template-columns: repeat(3, 1fr);
-         justify-content: space-evenly;
-         min-height: 100vh;      
-         row-gap: 10rem;
-         min-width: 100%;
          animation-name: girar;
          animation-iteration-count: infinite;
          animation-duration: 30s;
@@ -18,12 +15,48 @@
          justify-items: center;
       }
    }
-   @keyframes girar{
-      from{
-         transform: translatey(100px);
+}
+
+//VISTA TABLET INDEX
+@media only screen and (min-width: 768px) and (max-width:1023px){
+   .containerMain{
+      height: 92vh;      
+      min-width: 100%;
+      justify-content: center;
+      overflow: hidden;
+      .animacionIndex{
+         animation-name: girar;
+         animation-iteration-count: infinite;
+         animation-duration: 30s;
+         justify-self: center;
+         justify-items: center;
       }
-      to{
-         transform: translatey(-1000px);
+   }
+}
+
+//VISTA MOBILE INDEX
+@media only screen and (max-width: 767px){
+   .containerMain{
+      height: 92vh;      
+      min-width: 100%;
+      justify-content: center;
+      overflow: hidden;
+      .animacionIndex{
+         animation-name: girar;
+         animation-iteration-count: infinite;
+         animation-duration: 30s;
+         justify-self: center;
+         justify-items: center;
       }
+   }
+}
+
+//Animacion
+@keyframes girar{
+   from{
+      transform: translatey(0px);
+   }
+   to{
+      transform: translatey(-1800px);
    }
 }

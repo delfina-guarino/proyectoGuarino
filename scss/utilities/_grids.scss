@@ -2,7 +2,7 @@
 
 //VISTA DESKTOP INDEX
 
-@media only screen and (min-width:600px){
+@media only screen and (min-width: 1024px){
    .navbar{
       z-index: 1;
       background-color: #ffffff;
@@ -19,16 +19,17 @@
          min-height: 100vh;      
          row-gap: 10rem;
          min-width: 100%;
-         justify-self: center;
+         justify-content: center;
          justify-items: center;
       }
       .tituloLanding{
+         justify-content: center;
+         justify-items: center;
          position: relative;
          z-index: 2;
-         top: 42%;
-         left: 42%;
+         top: 43%;
+         left: 42.5%;
          display: inline-block;
-         justify-items: center;
          text-shadow: 0px 4px 3px rgba(0,0,0,0.3),
                       0px 8px 13px rgba(0,0,0,0.08),
                       0px 18px 23px rgba(0,0,0,0.08);
@@ -37,7 +38,7 @@
 }
 
 //VISTA TABLET INDEX
-@media only screen and (max-width: 767px){
+@media only screen and (min-width: 768px) and (max-width:1023px){
    .navbar{
       z-index: 1;
       background-color: #ffffff;
@@ -56,13 +57,17 @@
          min-width: 100%;
          justify-self: center;
          justify-items: center;
+         .fotoIndex{
+            width: 200px;
+         }
       }
       .tituloLanding{
          position: relative;
          z-index: 2;
-         top: 42%;
-         left: 42%;
+         top: 38%;
+         left: 34%;
          display: inline-block;
+         justify-self: center;
          justify-items: center;
          text-shadow: 0px 4px 3px rgba(0,0,0,0.3),
                       0px 8px 13px rgba(0,0,0,0.08),
@@ -74,54 +79,39 @@
 
 //VISTA MOBILE INDEX
 @media only screen and (max-width: 767px){
+   .navbar{
+      z-index: 1;
+      background-color: #ffffff;
+   }
    .containerMain{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      min-height: 100vh;      
+      height: 92vh;      
       min-width: 100%;
-      column-gap: 1rem;
-      grid-template-areas: "titulo titulo"
-                           "foto1 foto1"
-                           "foto2 foto2"
-                           "foto3 foto3"
-                           "footer footer";
-      justify-items: center;
-      align-items: center;                     
-      justify-self: center;   
-
-      .tituloLanding{
-         grid-area: titulo;
-         display: block;
+      justify-content: center;
+      overflow: hidden;
+      .animacionIndex{
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         justify-content: space-evenly;
+         min-height: 100vh;      
+         row-gap: 10rem;
+         min-width: 100%;
+         justify-self: center;
          justify-items: center;
-         align-self: center;
-      }
-      .foto1{
-         grid-area: foto1;
-         display: block;
-         .fotoUno{
-            height: 200px;
-            width: 400px;
-            object-fit: cover;
+         .fotoIndex{
+            width: 200px;
          }
       }
-      
-      .foto2{
-         grid-area: foto2;
-         display: block;
-         .fotoDos{
-            height: 200px;
-            width: 400px;
-            object-fit: cover;
-         }
-      }
-      .foto3{
-         grid-area: foto3;
-         display: block;
-         .fotoTres{
-            height: 200px;
-            width: 400px;
-            object-fit: cover;
-         }
+      .tituloLanding{
+         position: relative;
+         z-index: 2;
+         top: 35%;
+         left: 28%;
+         display: inline-block;
+         justify-self: center;
+         justify-items: center;
+         text-shadow: 0px 4px 3px rgba(0,0,0,0.3),
+                      0px 8px 13px rgba(0,0,0,0.08),
+                      0px 18px 23px rgba(0,0,0,0.08);
       }
    }
 }
@@ -135,6 +125,7 @@
    .gridProyectos{
          display: grid;
          height: 100vh;
+         width: 100%;
          grid-template-columns: repeat(3, 1fr);
          grid-template-areas: "header header header"
                               "main main main"
@@ -142,7 +133,7 @@
          grid-template-rows: 0.2fr 1.8fr 0fr;
          header{
             grid-area: header;
-            width: auto;
+            width: 100%;
          }
          main{
             grid-area: main;
