@@ -1,0 +1,29 @@
+@media only screen and (min-width: 1024px){
+   .containerMain{
+      height: 92vh;      
+      min-width: 100%;
+      justify-content: center;
+      overflow: hidden;
+      .animacionIndex{
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         justify-content: space-evenly;
+         min-height: 100vh;      
+         row-gap: 10rem;
+         min-width: 100%;
+         animation-name: girar;
+         animation-iteration-count: infinite;
+         animation-duration: 30s;
+         justify-self: center;
+         justify-items: center;
+      }
+   }
+   @keyframes girar{
+      from{
+         transform: translatey(100px);
+      }
+      to{
+         transform: translatey(-1000px);
+      }
+   }
+}

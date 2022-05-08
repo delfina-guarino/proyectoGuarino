@@ -2,7 +2,7 @@
 
 //VISTA DESKTOP INDEX
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width:600px){
    .navbar{
       z-index: 1;
       background-color: #ffffff;
@@ -19,9 +19,6 @@
          min-height: 100vh;      
          row-gap: 10rem;
          min-width: 100%;
-         animation-name: girar;
-         animation-iteration-count: infinite;
-         animation-duration: 30s;
          justify-self: center;
          justify-items: center;
       }
@@ -37,16 +34,43 @@
                       0px 18px 23px rgba(0,0,0,0.08);
       }
    }
+}
 
-   @keyframes girar{
-      from{
-         transform: translatey(100px);
+//VISTA TABLET INDEX
+@media only screen and (max-width: 767px){
+   .navbar{
+      z-index: 1;
+      background-color: #ffffff;
+   }
+   .containerMain{
+      height: 92vh;      
+      min-width: 100%;
+      justify-content: center;
+      overflow: hidden;
+      .animacionIndex{
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         justify-content: space-evenly;
+         min-height: 100vh;      
+         row-gap: 10rem;
+         min-width: 100%;
+         justify-self: center;
+         justify-items: center;
       }
-      to{
-         transform: translatey(-1000px);
+      .tituloLanding{
+         position: relative;
+         z-index: 2;
+         top: 42%;
+         left: 42%;
+         display: inline-block;
+         justify-items: center;
+         text-shadow: 0px 4px 3px rgba(0,0,0,0.3),
+                      0px 8px 13px rgba(0,0,0,0.08),
+                      0px 18px 23px rgba(0,0,0,0.08);
       }
    }
 }
+
 
 //VISTA MOBILE INDEX
 @media only screen and (max-width: 767px){
