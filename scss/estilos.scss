@@ -49,12 +49,6 @@ body{
    align-self: center;
    min-height: 100%;
    main{
-      .tituloLanding{
-         grid-area: titulo;
-         display: block;
-         justify-items: center;
-         align-self: center;
-      }
       #tituloGaleano{
          color: #f5ac58;
          justify-content: center;
@@ -66,7 +60,6 @@ body{
             letter-spacing: 1rem;
             color: $color-negro;
             text-transform: uppercase;
-            display: block;
             justify-items: center;
             color: #f5ac58;
          } 

@@ -23,13 +23,12 @@
          justify-items: center;
       }
       .tituloLanding{
-         justify-content: center;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         z-index: 999;
          justify-items: center;
-         position: relative;
-         z-index: 2;
-         top: 43%;
-         left: 42.5%;
-         display: inline-block;
+         position: absolute;
          text-shadow: 0px 4px 3px rgba(0,0,0,0.3),
                       0px 8px 13px rgba(0,0,0,0.08),
                       0px 18px 23px rgba(0,0,0,0.08);
@@ -62,13 +61,12 @@
          }
       }
       .tituloLanding{
-         position: relative;
-         z-index: 2;
-         top: 38%;
-         left: 34%;
-         display: inline-block;
-         justify-self: center;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         z-index: 999;
          justify-items: center;
+         position: absolute;
          text-shadow: 0px 4px 3px rgba(0,0,0,0.3),
                       0px 8px 13px rgba(0,0,0,0.08),
                       0px 18px 23px rgba(0,0,0,0.08);
@@ -84,7 +82,7 @@
       background-color: #ffffff;
    }
    .containerMain{
-      height: 92vh;      
+      height: 100vh;      
       min-width: 100%;
       justify-content: center;
       overflow: hidden;
@@ -98,17 +96,16 @@
          justify-self: center;
          justify-items: center;
          .fotoIndex{
-            width: 200px;
+            width: 150px;
          }
       }
       .tituloLanding{
-         position: relative;
-         z-index: 2;
-         top: 35%;
-         left: 28%;
-         display: inline-block;
-         justify-self: center;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         z-index: 999;
          justify-items: center;
+         position: absolute;
          text-shadow: 0px 4px 3px rgba(0,0,0,0.3),
                       0px 8px 13px rgba(0,0,0,0.08),
                       0px 18px 23px rgba(0,0,0,0.08);
