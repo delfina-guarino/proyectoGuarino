@@ -1,7 +1,7 @@
+
 //INDEX
 
 //VISTA DESKTOP INDEX
-
 @media only screen and (min-width: 1024px){
    .navbar{
       z-index: 1;
@@ -74,7 +74,6 @@
    }
 }
 
-
 //VISTA MOBILE INDEX
 @media only screen and (max-width: 767px){
    .navbar{
@@ -119,124 +118,183 @@
 
 //VISTA DESKTOP PORTFOLIO
 @media only screen and (min-width:1024px){
-   .gridProyectos{
-         display: grid;
-         height: 100vh;
-         width: 100%;
-         grid-template-columns: repeat(3, 1fr);
-         grid-template-areas: "header header header"
-                              "main main main"
-                              "footer footer footer" ;
-         grid-template-rows: 0.2fr 1.8fr 0fr;
-         header{
-            grid-area: header;
-            width: 100%;
+   header{
+      width: 100%;
+      .navbar{
+         z-index: 1;
+         background-color: #ffffff;
+      }
+   }
+   main{
+      #titulo{
+         @include flexJustCenter;
+         padding: 2rem 0rem 2rem 0rem;
+      }
+   }
+   .containerCards{
+      display: grid;
+      height: 65vh;
+      width: 100%;
+      grid-template-columns: repeat(3, 1fr);
+      @include flexRow;
+      @include flexJustCenter;
+      #animacionCard{
+         &:hover{
+            transform: scale(1.1);
+         } 
+      }
+      .proyectoCard1{
+         @include flexCol;
+         margin: 20px;
+         a{
+            padding-bottom: 1rem;
+            font-size: 1.3rem;
          }
-         main{
-            grid-area: main;
-            @include flexCol;
-            padding-top: 2rem;
-            div{
-               #tituloProyectos{
-                  @include flexJustCenter;
-                  padding: 2rem;
-               }
-            }
-            .containerCards{
-               @include flexRow;
-               @include flexJustCenter;
-               #animacionCard{
-                  &:hover{
-                     transform: scale(1.1);
-                  } 
-               }
-               .proyectoCard1{
-                  @include flexCol;
-                  margin: 20px;
-               }
-               .proyectoCard2{
-                  @include flexCol;
-                  margin: 20px;
-               }
-               .proyectoCard3{
-                  @include flexCol;
-                  margin: 20px;
-               }
-            }
+      }
+      .proyectoCard2{
+         @include flexCol;
+         margin: 20px;
+         a{
+            padding-bottom: 1rem;
+            font-size: 1.3rem;
          }
-      }   
-   footer{
-      grid-area: footer;
+      }
+      .proyectoCard3{
+         @include flexCol;
+         margin: 20px;
+         a{
+            padding-bottom: 1rem;
+            font-size: 1.3rem;
+         }
+      }
+   }
+}
+
+//VISTA TABLET PORTFOLIO
+@media only screen and (min-width: 768px) and (max-width:1023px){
+   header{
+      width: 100%;
+      .navbar{
+         z-index: 1;
+         background-color: #ffffff;
+      }
+   }
+   main{
+      #titulo{
+         @include flexJustCenter;
+         padding: 2rem 0rem 2rem 0rem;
+         #tituloProyectos{
+            font-size: 4rem;
+         }  
+      }
+   }
+   .containerCards{
+      display: grid;
+      height: 120vh;
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      #animacionCard{
+         &:hover{
+            transform: scale(1.1);
+         } 
+      }
+      .proyectoCard1{
+         @include flexCol;
+         margin: 1rem;
+         a{
+            padding-bottom: 1rem;
+            font-size: 1.3rem;
+         }
+      }
+      .proyectoCard2{
+         @include flexCol;
+         margin: 1rem;
+         a{
+            padding-bottom: 1rem;
+            font-size: 1.3rem;
+         }
+      }
+      .proyectoCard3{
+         @include flexCol;
+         margin: 1rem;
+         a{
+            padding-bottom: 1rem;
+            font-size: 1.3rem;
+         }
+      }
    }
 }
 
 //VISTA MOBILE PORTFOLIO
 @media only screen and (max-width: 767px){
-   .gridProyectos{
-      display: grid;
-      height: 100vh;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: "header header header"
-                           "main main main"
-                           "footer footer footer" ;
-      grid-template-rows: 0.2fr 1.8fr 0fr;
-
-      header{
-         grid-area: header;
-         width: auto;
+   header{
+      width: 100%;
+      .navbar{
+         z-index: 1;
+         background-color: #ffffff;
       }
-      main{
-         grid-area: main;
-         @include flexCol;
-         padding-top: 2rem;
-         @include flexJustCenter;
-         align-items: center;                     
-         justify-self: center; 
-         div{
-            #tituloProyectos{
-               @include flexJustCenter;
-               padding: 2rem;
-            }
-         }
-         .containerCards{
-            @include flexCol;
-            @include flexJustCenter;
-            .proyectoCard1{
-               @include flexCol;
-               margin: 20px;
-               img{
-                  height: 200px;
-                  width: 400px;
-                  object-fit: cover;
-               }               
-            }
-            .proyectoCard2{
-               @include flexCol;
-               margin: 20px;
-               img{
-                  height: 200px;
-                  width: 400px;
-                  object-fit: cover;
-               }
-            }
-            .proyectoCard3{
-               @include flexCol;
-               margin: 20px;
-               img{
-                  height: 200px;
-                  width: 400px;
-                  object-fit: cover;
-               }
-            }
-         }
-      }
-   }   
-   footer{
-      grid-area: footer;
    }
-
+   main{
+      #titulo{
+         @include flexJustCenter;
+         padding: 1rem 0rem 1rem 0rem;
+         #tituloProyectos{
+            font-size: 2.5rem;
+         }    
+      }
+   .containerCards{
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      #animacionCard{
+         &:hover{
+            transform: scale(1.1);
+         } 
+      }
+      .proyectoCard1{
+         @include flexCol;
+         margin: 0.5rem;
+         a{
+            padding-bottom: 1rem;
+            font-size: 1.3rem;
+         }
+         img{
+            height: 120px;
+            width: 300px;
+            object-fit: cover;
+         }
+      }
+      .proyectoCard2{
+         @include flexCol;
+         margin: 0.5rem;
+         a{
+            padding-bottom: 1rem;
+            font-size: 1.3rem;
+         }
+         img{
+            height: 120px;
+            width: 300px;
+            object-fit: cover;
+         }
+      }
+      .proyectoCard3{
+         @include flexCol;
+         margin: 0.5rem;
+         a{
+            padding-bottom: 0.2rem;
+            font-size: 1.3rem;
+         }
+         img{
+            height: 120px;
+            width: 300px;
+            object-fit: cover;
+         }
+      }
+   }
+   }  
 }
-
 
 
 //CONTACTO
@@ -371,10 +429,6 @@
       justify-content: end;
       margin: 1rem;
    }
-
-   
-
-
 }
 
 
@@ -441,6 +495,8 @@
             padding-left: 3rem;
             p{
                margin: 1rem 1rem 1rem 0rem;
+               resize: both;
+               overflow: auto;
             }
          }
       }

@@ -40,11 +40,12 @@ p {
   font: normal 16px Montserrat;
   line-height: 1.5rem; }
 
-.gridProyectos main div .tituloProyecto {
+.containerCards div .tituloProyecto {
   font: 400 16px Jost;
   color: #2C2C2C;
   text-transform: uppercase;
-  text-decoration: none; }
+  text-decoration: none;
+  text-align: justify; }
 
 @media only screen and (min-width: 1024px) {
   .navbar {
@@ -132,101 +133,142 @@ p {
       text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3), 0px 8px 13px rgba(0, 0, 0, 0.08), 0px 18px 23px rgba(0, 0, 0, 0.08); } }
 
 @media only screen and (min-width: 1024px) {
-  .gridProyectos {
+  header {
+    width: 100%; }
+    header .navbar {
+      z-index: 1;
+      background-color: #ffffff; }
+  main #titulo {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0rem 2rem 0rem; }
+  .containerCards {
     display: grid;
-    height: 100vh;
+    height: 65vh;
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "header header header" "main main main" "footer footer footer";
-    grid-template-rows: 0.2fr 1.8fr 0fr; }
-    .gridProyectos header {
-      grid-area: header;
-      width: 100%; }
-    .gridProyectos main {
-      grid-area: main;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center; }
+    .containerCards #animacionCard:hover {
+      transform: scale(1.1); }
+    .containerCards .proyectoCard1 {
       display: flex;
       flex-direction: column;
-      padding-top: 2rem; }
-      .gridProyectos main div #tituloProyectos {
-        display: flex;
-        justify-content: center;
-        padding: 2rem; }
-      .gridProyectos main .containerCards {
-        display: flex;
-        flex-direction: row;
-        display: flex;
-        justify-content: center; }
-        .gridProyectos main .containerCards #animacionCard:hover {
-          transform: scale(1.1); }
-        .gridProyectos main .containerCards .proyectoCard1 {
-          display: flex;
-          flex-direction: column;
-          margin: 20px; }
-        .gridProyectos main .containerCards .proyectoCard2 {
-          display: flex;
-          flex-direction: column;
-          margin: 20px; }
-        .gridProyectos main .containerCards .proyectoCard3 {
-          display: flex;
-          flex-direction: column;
-          margin: 20px; }
-  footer {
-    grid-area: footer; } }
+      margin: 20px; }
+      .containerCards .proyectoCard1 a {
+        padding-bottom: 1rem;
+        font-size: 1.3rem; }
+    .containerCards .proyectoCard2 {
+      display: flex;
+      flex-direction: column;
+      margin: 20px; }
+      .containerCards .proyectoCard2 a {
+        padding-bottom: 1rem;
+        font-size: 1.3rem; }
+    .containerCards .proyectoCard3 {
+      display: flex;
+      flex-direction: column;
+      margin: 20px; }
+      .containerCards .proyectoCard3 a {
+        padding-bottom: 1rem;
+        font-size: 1.3rem; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    width: 100%; }
+    header .navbar {
+      z-index: 1;
+      background-color: #ffffff; }
+  main #titulo {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0rem 2rem 0rem; }
+    main #titulo #tituloProyectos {
+      font-size: 4rem; }
+  .containerCards {
+    display: grid;
+    height: 120vh;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center; }
+    .containerCards #animacionCard:hover {
+      transform: scale(1.1); }
+    .containerCards .proyectoCard1 {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem; }
+      .containerCards .proyectoCard1 a {
+        padding-bottom: 1rem;
+        font-size: 1.3rem; }
+    .containerCards .proyectoCard2 {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem; }
+      .containerCards .proyectoCard2 a {
+        padding-bottom: 1rem;
+        font-size: 1.3rem; }
+    .containerCards .proyectoCard3 {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem; }
+      .containerCards .proyectoCard3 a {
+        padding-bottom: 1rem;
+        font-size: 1.3rem; } }
 
 @media only screen and (max-width: 767px) {
-  .gridProyectos {
+  header {
+    width: 100%; }
+    header .navbar {
+      z-index: 1;
+      background-color: #ffffff; }
+  main #titulo {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0rem 1rem 0rem; }
+    main #titulo #tituloProyectos {
+      font-size: 2.5rem; }
+  main .containerCards {
     display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "header header header" "main main main" "footer footer footer";
-    grid-template-rows: 0.2fr 1.8fr 0fr; }
-    .gridProyectos header {
-      grid-area: header;
-      width: auto; }
-    .gridProyectos main {
-      grid-area: main;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center; }
+    main .containerCards #animacionCard:hover {
+      transform: scale(1.1); }
+    main .containerCards .proyectoCard1 {
       display: flex;
       flex-direction: column;
-      padding-top: 2rem;
+      margin: 0.5rem; }
+      main .containerCards .proyectoCard1 a {
+        padding-bottom: 1rem;
+        font-size: 1.3rem; }
+      main .containerCards .proyectoCard1 img {
+        height: 120px;
+        width: 300px;
+        object-fit: cover; }
+    main .containerCards .proyectoCard2 {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      justify-self: center; }
-      .gridProyectos main div #tituloProyectos {
-        display: flex;
-        justify-content: center;
-        padding: 2rem; }
-      .gridProyectos main .containerCards {
-        display: flex;
-        flex-direction: column;
-        display: flex;
-        justify-content: center; }
-        .gridProyectos main .containerCards .proyectoCard1 {
-          display: flex;
-          flex-direction: column;
-          margin: 20px; }
-          .gridProyectos main .containerCards .proyectoCard1 img {
-            height: 200px;
-            width: 400px;
-            object-fit: cover; }
-        .gridProyectos main .containerCards .proyectoCard2 {
-          display: flex;
-          flex-direction: column;
-          margin: 20px; }
-          .gridProyectos main .containerCards .proyectoCard2 img {
-            height: 200px;
-            width: 400px;
-            object-fit: cover; }
-        .gridProyectos main .containerCards .proyectoCard3 {
-          display: flex;
-          flex-direction: column;
-          margin: 20px; }
-          .gridProyectos main .containerCards .proyectoCard3 img {
-            height: 200px;
-            width: 400px;
-            object-fit: cover; }
-  footer {
-    grid-area: footer; } }
+      flex-direction: column;
+      margin: 0.5rem; }
+      main .containerCards .proyectoCard2 a {
+        padding-bottom: 1rem;
+        font-size: 1.3rem; }
+      main .containerCards .proyectoCard2 img {
+        height: 120px;
+        width: 300px;
+        object-fit: cover; }
+    main .containerCards .proyectoCard3 {
+      display: flex;
+      flex-direction: column;
+      margin: 0.5rem; }
+      main .containerCards .proyectoCard3 a {
+        padding-bottom: 0.2rem;
+        font-size: 1.3rem; }
+      main .containerCards .proyectoCard3 img {
+        height: 120px;
+        width: 300px;
+        object-fit: cover; } }
 
 @media only screen and (min-width: 1024px) {
   .gridContacto {
@@ -377,7 +419,9 @@ p {
       align-self: center;
       padding-left: 3rem; }
       main .gridSobre .containerSobre p {
-        margin: 1rem 1rem 1rem 0rem; } }
+        margin: 1rem 1rem 1rem 0rem;
+        resize: both;
+        overflow: auto; } }
 
 @media only screen and (min-width: 1024px) {
   main .gridProyecto1 {

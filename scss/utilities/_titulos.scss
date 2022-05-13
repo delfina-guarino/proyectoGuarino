@@ -44,15 +44,14 @@ p{
 
 //titulo proyectos
 
-.gridProyectos{
-   main{
-      div{
-         .tituloProyecto{
-            font: 400 16px Jost;
-            color: $color-negro;
-            text-transform: uppercase;
-            text-decoration: none;
-         }
+.containerCards{
+   div{
+      .tituloProyecto{
+         font: 400 16px Jost;
+         color: $color-negro;
+         text-transform: uppercase;
+         text-decoration: none;
+         text-align: justify;
       }
    }
 }
