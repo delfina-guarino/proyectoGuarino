@@ -1,5 +1,5 @@
 @import 'utilities/variables';
-@import 'utilities/titulos';
+@import 'utilities/fuentes';
 @import 'utilities/grids';
 @import 'utilities/animaciones';
 
@@ -14,13 +14,15 @@
    box-sizing: border-box;
 } 
 
+main{
+   margin-top: 5rem;
+}
 
 
 
 //estilos header y menu
 
 header{
-   background-color: #ffffff;
    border-bottom: solid 2px $color-negro;
    .logo{
       height: 3.2rem;
@@ -60,7 +62,7 @@ body{
             color: $color-negro;
             text-transform: uppercase;
             justify-items: center;
-            color: #f5ac58;
+            color: $color-naranja;
          } 
       }
 }

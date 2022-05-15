@@ -1,0 +1,215 @@
+//VISTA MOBILE SOBRE MI TITULO
+
+@media only screen and (max-width: 767px){
+   main{
+      .gridSobre{
+         .containerSobre{
+            .tituloHola{
+               font-size: 2rem;
+               margin-bottom: 0rem;
+            }
+            .subtituloSobre{
+               font-size: 1rem;
+               margin-bottom: 0rem;
+            }
+            p{
+               font-size: 0.8rem;
+            }
+            a{
+               text-decoration: none;
+               color: $color-negro;
+            }
+         }
+      }
+   }
+}
+
+.h1{
+   font-family: degular,sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   color: $color-negro;
+   font-size: 5rem;
+   justify-items: center;
+}
+
+.h2{
+   font-family: degular,sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   color: $color-negro;
+   font-size: 3rem;
+   padding: 1rem 0rem;
+}
+
+.h4{
+   font-family: jost,sans-serif;
+   font-weight: 300 ;
+   color: $color-negro;
+   font-size: 1.25rem;
+   text-transform: uppercase;
+   padding: 0.5rem 0rem;
+}
+
+.h5{
+   font-family: jost,sans-serif;
+   font-weight: 400 ;
+   color: $color-negro;
+   font-size: 1rem;
+   text-transform: uppercase;
+   padding: 0.5rem 0rem;
+}
+
+p{
+   font: normal 16px Montserrat;
+   line-height: 1.5rem;
+}
+
+//header
+
+
+//titulo proyectos
+
+.containerCards{
+   div{
+      .tituloProyecto{
+         font: 400 16px Jost;
+         color: $color-negro;
+         text-transform: uppercase;
+         text-decoration: none;
+         text-align: justify;
+      }
+   }
+}
+
+//textos contactos
+@media only screen and (min-width: 1024px){
+   .gridContacto{
+      .containerFormulario{
+         .formulario{
+            div{
+               .campo{
+                  border-top-style: none;
+                  border-right-style: none;
+                  border-left-style: none;
+                  border-bottom: solid 1px $color-negro;
+                  font-family: Montserrat ;
+                  font-size: 1rem;
+               }
+            }
+            .botonEnviar{
+               font-family: jost,sans-serif;
+               font-weight: 400 ;
+               color: #0C0C0C;
+               font-size: 16px;
+               text-transform: uppercase;
+            }
+         }
+      }
+   }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px){
+   .gridContacto{
+      .containerFormulario{
+         .formulario{
+            div{
+               .campo{
+                  border-top-style: none;
+                  border-right-style: none;
+                  border-left-style: none;
+                  border-bottom: solid 1px $color-negro;
+                  font-family: Montserrat ;
+                  font-size: 1rem;
+               }
+            }
+            .botonEnviar{
+               font-family: jost,sans-serif;
+               font-weight: 400 ;
+               color: #0C0C0C;
+               font-size: 16px;
+               text-transform: uppercase;
+            }
+         }
+      }
+   }
+}
+
+@media only screen and (max-width: 767px){
+   .gridContacto{
+      display: flex;
+      flex-direction: column-reverse;
+      grid-template-areas: "formulario"
+                           "contactos";
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.1fr 1fr;
+      min-width: 100%;
+      justify-items: center;
+      align-items: center;
+      justify-self: center;
+      margin-top: 2rem;
+   }
+   .contactos{
+      grid-template-areas: contactos;
+      justify-items: end;
+      gap: 2rem;
+      margin: 1rem;
+      display: flex;
+      div{
+         .body{
+           display: none;   
+         }
+         a{
+            text-decoration: none;
+         }
+      }
+   }
+
+   .containerFormulario{
+      grid-template-areas: formulario;
+      justify-content: center;
+      h3{
+         font-size: 1rem;
+      }
+      h1{
+         font-size: 2.4rem;
+      }
+   }
+
+   .formulario{
+      border: none;
+      background-color: transparent;
+      resize: none;
+      outline: none;
+   }
+
+   .campo{
+      display: block;
+      border-top-style: none;
+      border-right-style: none;
+      border-left-style: none;
+      border-bottom: solid 1px #444343;
+      font-family: Montserrat ;
+      font-size: 14px;
+      height: 25px;
+      width: 280px;
+   }   
+   
+   .input{
+      padding: 0.8rem;
+   }
+
+   .botonEnviar{
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #2C2C2C;
+      border-radius: 150px;
+      padding: 10px 20px 10px 20px;
+      font-family: jost,sans-serif;
+      font-weight: 400 ;
+      color: #0C0C0C;
+      font-size: 16px;
+      text-transform: uppercase;
+      justify-content: end;
+      margin: 1rem;
+   }
+}

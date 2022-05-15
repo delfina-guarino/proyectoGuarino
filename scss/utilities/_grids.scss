@@ -305,11 +305,13 @@
       display: grid;
       grid-template-areas: "contactos formulario";
       padding: 5rem;
+      grid-template-columns: 1fr 2fr;
       .contactos{
          grid-template-areas: contactos;
          justify-content: end;
+         padding-right: 1rem;
       }
-      .containerContacto{
+      .containerFormulario{
          grid-template-areas: formulario;
          h1{
             padding: 1rem 0rem;
@@ -323,14 +325,8 @@
                padding:0rem 2rem 2rem 0rem;
                .campo{
                   display: block;
-                  border-top-style: none;
-                  border-right-style: none;
-                  border-left-style: none;
-                  border-bottom: solid 1px $color-negro;
-                  font-family: Montserrat ;
-                  font-size: 1rem;
                   height: 2rem;
-                  width: 32rem;
+                  width: 100%;
                }
             }
             .botonEnviar{
@@ -338,18 +334,55 @@
                border: map-get($map: $boton, $key: border-boton);
                border-radius: map-get($map: $boton, $key: border-radius-boton);
                padding: map-get($map: $boton, $key: padding-boton);
-               font-family: jost,sans-serif;
-               font-weight: 400 ;
-               color: #0C0C0C;
-               font-size: 16px;
-               text-transform: uppercase;
                .botonEnviar:active {
-                  background-color: #3e8e41;
-                  box-shadow: 1 2px #d8d8d8;
-                  transform: translateY(4px);
+                  box-shadow: 1 2px #e4e2e2;
+                  transform: translate(1px);
                }
-               .botonEnviar:hover {
-                  background-color: #e6e6e6;
+            }
+         }
+      }
+   }
+}
+
+//VISTA TABLET CONTACTO
+@media only screen and (min-width: 768px) and (max-width:1023px){
+   .gridContacto{
+      display: grid;
+      grid-template-areas: "contactos formulario";
+      padding: 5rem;
+      width: 90%;
+      .contactos{
+         grid-template-areas: contactos;
+         justify-content: end;
+         padding-right: 1rem;
+      }
+      .containerFormulario{
+         grid-template-areas: formulario;
+         width: 90%;
+         h1{
+            padding: 1rem 0rem;
+         }
+         .formulario{
+            border: none;
+            background-color: transparent;
+            resize: none;
+            outline: none;
+            div{
+               padding:0rem 2rem 2rem 0rem;
+               .campo{
+                  display: block;
+                  height: 2rem;
+                  width: 130%;
+               }
+            }
+            .botonEnviar{
+               background-color: map-get($map: $boton, $key: bg-boton);
+               border: map-get($map: $boton, $key: border-boton);
+               border-radius: map-get($map: $boton, $key: border-radius-boton);
+               padding: map-get($map: $boton, $key: padding-boton);
+               .botonEnviar:active {
+                  box-shadow: 1 2px #e4e2e2;
+                  transform: translate(1px);
                }
             }
          }
@@ -360,23 +393,23 @@
 //VISTA MOBILE CONTACTO
 @media only screen and (max-width: 767px){
    .gridContacto{
-      display: grid;
+      display: flex;
+      flex-direction: column-reverse;
       grid-template-areas: "formulario"
                            "contactos";
       grid-template-columns: 1fr;
       grid-template-rows: 0.1fr 1fr;
-      min-height: 100vh;
       min-width: 100%;
       justify-items: center;
       align-items: center;
       justify-self: center;
-      margin-top: 1rem;
+      margin-top: 2rem;
    }
-
    .contactos{
       grid-template-areas: contactos;
       justify-items: end;
       gap: 2rem;
+      margin: 1rem;
       display: flex;
       div{
          .body{
@@ -388,7 +421,7 @@
       }
    }
 
-   .containerContacto{
+   .containerFormulario{
       grid-template-areas: formulario;
       justify-content: center;
    }
@@ -551,8 +584,9 @@
 @media only screen and (min-width: 1024px){
    main{
       .gridProyecto1{
+         z-index: 999;
          min-height: 100%;
-         height: 80vh;
+         height: 100%;
          display: grid;
          grid-column-gap: 1rem; 
          grid-template-areas: "info fotos";
@@ -565,7 +599,7 @@
             position: fixed;
             align-self: flex-start;
             justify-content: center;
-            width: 28rem;
+            width: 30%;
             margin-left: 8rem;
             padding-top: 3rem;
          }
@@ -574,16 +608,54 @@
             display: block;
             justify-content: end;
             margin-top: 3rem;
-            margin-left: 42rem;
+            width: 60%;
+            margin-left: 45%;
             img{
                padding: 1rem;
             }
          }
       }
    }
+   footer{
+      position: relative;
+   }
 }
 
-//VISTA MOBILE PROYECTO 2
+
+//VISTA TABLET PROYECTO 1
+@media only screen and (max-width: 767px){
+   main{
+      .gridProyecto1{
+         min-height: 100%;
+         height: 80vh;
+         display: grid;
+         grid-column-gap: 1rem; 
+         grid-template-areas: "info"
+                              "fotos";
+         margin-top: 1rem;
+         gap: 1rem;
+         justify-items: center;
+         align-items: center;                     
+         justify-content: center;
+         .infoProUno{
+            grid-template-areas: info;
+            align-self: flex-start;
+            justify-content: center;
+            width: 28rem;
+         }
+         .fotos{
+            grid-template-areas: fotos;
+            justify-content: center;
+            img{
+               justify-content: center;
+
+            }
+         }
+      }
+   }  
+}
+
+//VISTA MOBILE PROYECTO 1
 @media only screen and (max-width: 767px){
    main{
       .gridProyecto1{

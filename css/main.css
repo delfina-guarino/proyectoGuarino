@@ -56,6 +56,95 @@ p {
   text-align: justify; }
 
 @media only screen and (min-width: 1024px) {
+  .gridContacto .containerFormulario .formulario div .campo {
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom: solid 1px #2C2C2C;
+    font-family: Montserrat;
+    font-size: 1rem; }
+  .gridContacto .containerFormulario .formulario .botonEnviar {
+    font-family: jost,sans-serif;
+    font-weight: 400;
+    color: #0C0C0C;
+    font-size: 16px;
+    text-transform: uppercase; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .gridContacto .containerFormulario .formulario div .campo {
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom: solid 1px #2C2C2C;
+    font-family: Montserrat;
+    font-size: 1rem; }
+  .gridContacto .containerFormulario .formulario .botonEnviar {
+    font-family: jost,sans-serif;
+    font-weight: 400;
+    color: #0C0C0C;
+    font-size: 16px;
+    text-transform: uppercase; } }
+
+@media only screen and (max-width: 767px) {
+  .gridContacto {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-template-areas: "formulario" "contactos";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    min-width: 100%;
+    justify-items: center;
+    align-items: center;
+    justify-self: center;
+    margin-top: 2rem; }
+  .contactos {
+    grid-template-areas: contactos;
+    justify-items: end;
+    gap: 2rem;
+    margin: 1rem;
+    display: flex; }
+    .contactos div .body {
+      display: none; }
+    .contactos div a {
+      text-decoration: none; }
+  .containerFormulario {
+    grid-template-areas: formulario;
+    justify-content: center; }
+    .containerFormulario h3 {
+      font-size: 1rem; }
+    .containerFormulario h1 {
+      font-size: 2.4rem; }
+  .formulario {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none; }
+  .campo {
+    display: block;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom: solid 1px #444343;
+    font-family: Montserrat;
+    font-size: 14px;
+    height: 25px;
+    width: 280px; }
+  .input {
+    padding: 0.8rem; }
+  .botonEnviar {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #2C2C2C;
+    border-radius: 150px;
+    padding: 10px 20px 10px 20px;
+    font-family: jost,sans-serif;
+    font-weight: 400;
+    color: #0C0C0C;
+    font-size: 16px;
+    text-transform: uppercase;
+    justify-content: end;
+    margin: 1rem; } }
+
+@media only screen and (min-width: 1024px) {
   .navbar {
     z-index: 1;
     background-color: #ffffff; }
@@ -282,70 +371,94 @@ p {
   .gridContacto {
     display: grid;
     grid-template-areas: "contactos formulario";
-    padding: 5rem; }
+    padding: 5rem;
+    grid-template-columns: 1fr 2fr; }
     .gridContacto .contactos {
       grid-template-areas: contactos;
-      justify-content: end; }
-    .gridContacto .containerContacto {
+      justify-content: end;
+      padding-right: 1rem; }
+    .gridContacto .containerFormulario {
       grid-template-areas: formulario; }
-      .gridContacto .containerContacto h1 {
+      .gridContacto .containerFormulario h1 {
         padding: 1rem 0rem; }
-      .gridContacto .containerContacto .formulario {
+      .gridContacto .containerFormulario .formulario {
         border: none;
         background-color: transparent;
         resize: none;
         outline: none; }
-        .gridContacto .containerContacto .formulario div {
+        .gridContacto .containerFormulario .formulario div {
           padding: 0rem 2rem 2rem 0rem; }
-          .gridContacto .containerContacto .formulario div .campo {
+          .gridContacto .containerFormulario .formulario div .campo {
             display: block;
-            border-top-style: none;
-            border-right-style: none;
-            border-left-style: none;
-            border-bottom: solid 1px #2C2C2C;
-            font-family: Montserrat;
-            font-size: 1rem;
             height: 2rem;
-            width: 32rem; }
-        .gridContacto .containerContacto .formulario .botonEnviar {
+            width: 100%; }
+        .gridContacto .containerFormulario .formulario .botonEnviar {
           background-color: #ffffff;
           border: 1px solid #2C2C2C;
           border-radius: 150px;
-          padding: 10px 20px 10px 20px;
-          font-family: jost,sans-serif;
-          font-weight: 400;
-          color: #0C0C0C;
-          font-size: 16px;
-          text-transform: uppercase; }
-          .gridContacto .containerContacto .formulario .botonEnviar .botonEnviar:active {
-            background-color: #3e8e41;
-            box-shadow: 1 2px #d8d8d8;
-            transform: translateY(4px); }
-          .gridContacto .containerContacto .formulario .botonEnviar .botonEnviar:hover {
-            background-color: #e6e6e6; } }
+          padding: 10px 20px 10px 20px; }
+          .gridContacto .containerFormulario .formulario .botonEnviar .botonEnviar:active {
+            box-shadow: 1 2px #e4e2e2;
+            transform: translate(1px); } }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .gridContacto {
+    display: grid;
+    grid-template-areas: "contactos formulario";
+    padding: 5rem;
+    width: 90%; }
+    .gridContacto .contactos {
+      grid-template-areas: contactos;
+      justify-content: end;
+      padding-right: 1rem; }
+    .gridContacto .containerFormulario {
+      grid-template-areas: formulario;
+      width: 90%; }
+      .gridContacto .containerFormulario h1 {
+        padding: 1rem 0rem; }
+      .gridContacto .containerFormulario .formulario {
+        border: none;
+        background-color: transparent;
+        resize: none;
+        outline: none; }
+        .gridContacto .containerFormulario .formulario div {
+          padding: 0rem 2rem 2rem 0rem; }
+          .gridContacto .containerFormulario .formulario div .campo {
+            display: block;
+            height: 2rem;
+            width: 130%; }
+        .gridContacto .containerFormulario .formulario .botonEnviar {
+          background-color: #ffffff;
+          border: 1px solid #2C2C2C;
+          border-radius: 150px;
+          padding: 10px 20px 10px 20px; }
+          .gridContacto .containerFormulario .formulario .botonEnviar .botonEnviar:active {
+            box-shadow: 1 2px #e4e2e2;
+            transform: translate(1px); } }
 
 @media only screen and (max-width: 767px) {
   .gridContacto {
-    display: grid;
+    display: flex;
+    flex-direction: column-reverse;
     grid-template-areas: "formulario" "contactos";
     grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 1fr;
-    min-height: 100vh;
     min-width: 100%;
     justify-items: center;
     align-items: center;
     justify-self: center;
-    margin-top: 1rem; }
+    margin-top: 2rem; }
   .contactos {
     grid-template-areas: contactos;
     justify-items: end;
     gap: 2rem;
+    margin: 1rem;
     display: flex; }
     .contactos div .body {
       display: none; }
     .contactos div a {
       text-decoration: none; }
-  .containerContacto {
+  .containerFormulario {
     grid-template-areas: formulario;
     justify-content: center; }
   .formulario {
@@ -465,8 +578,9 @@ p {
 
 @media only screen and (min-width: 1024px) {
   main .gridProyecto1 {
+    z-index: 999;
     min-height: 100%;
-    height: 80vh;
+    height: 100%;
     display: grid;
     grid-column-gap: 1rem;
     grid-template-areas: "info fotos";
@@ -479,7 +593,7 @@ p {
       position: fixed;
       align-self: flex-start;
       justify-content: center;
-      width: 28rem;
+      width: 30%;
       margin-left: 8rem;
       padding-top: 3rem; }
     main .gridProyecto1 .fotos {
@@ -487,9 +601,35 @@ p {
       display: block;
       justify-content: end;
       margin-top: 3rem;
-      margin-left: 42rem; }
+      width: 60%;
+      margin-left: 45%; }
       main .gridProyecto1 .fotos img {
-        padding: 1rem; } }
+        padding: 1rem; }
+  footer {
+    position: relative; } }
+
+@media only screen and (max-width: 767px) {
+  main .gridProyecto1 {
+    min-height: 100%;
+    height: 80vh;
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-areas: "info" "fotos";
+    margin-top: 1rem;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    justify-content: center; }
+    main .gridProyecto1 .infoProUno {
+      grid-template-areas: info;
+      align-self: flex-start;
+      justify-content: center;
+      width: 28rem; }
+    main .gridProyecto1 .fotos {
+      grid-template-areas: fotos;
+      justify-content: center; }
+      main .gridProyecto1 .fotos img {
+        justify-content: center; } }
 
 @media only screen and (max-width: 767px) {
   main .gridProyecto1 {
@@ -569,8 +709,10 @@ p {
   padding: 0%;
   box-sizing: border-box; }
 
+main {
+  margin-top: 5rem; }
+
 header {
-  background-color: #ffffff;
   border-bottom: solid 2px #2C2C2C; }
   header .logo {
     height: 3.2rem; }
