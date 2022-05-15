@@ -1,6 +1,6 @@
 //colores
 
-$color-principal: #f5ac58;
+$color-naranja: #f5ac58;
 $color-negro: #2C2C2C;
 
 // mixins
@@ -19,6 +19,8 @@ $color-negro: #2C2C2C;
    justify-content: center;
 }
 
+
+
 //mapa
 
 $boton: (
@@ -34,10 +36,6 @@ $boton: (
    display: block;
 };
 
-.botonEnviar:active {
-   background-color: #3e8e41;
-   box-shadow: 0 5px #666;
-   transform: translateY(4px);
-}
+
 
   

@@ -1,3 +1,29 @@
+//VISTA MOBILE SOBRE MI TITULO
+
+@media only screen and (max-width: 767px){
+   main{
+      .gridSobre{
+         .containerSobre{
+            .tituloHola{
+               font-size: 2rem;
+               margin-bottom: 0rem;
+            }
+            .subtituloSobre{
+               font-size: 1rem;
+               margin-bottom: 0rem;
+            }
+            p{
+               font-size: 0.8rem;
+            }
+            a{
+               text-decoration: none;
+               color: $color-negro;
+            }
+         }
+      }
+   }
+}
+
 .h1{
    font-family: degular,sans-serif;
    font-weight: 400;
@@ -56,4 +82,3 @@ p{
    }
 }
 
-//titulo sobre mi

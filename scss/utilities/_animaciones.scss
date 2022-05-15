@@ -27,7 +27,7 @@
       .animacionIndex{
          animation-name: girar;
          animation-iteration-count: infinite;
-         animation-duration: 30s;
+         animation-duration: 40s;
          justify-self: center;
          justify-items: center;
       }
@@ -44,19 +44,25 @@
       .animacionIndex{
          animation-name: girar;
          animation-iteration-count: infinite;
-         animation-duration: 30s;
+         animation-duration: 40s;
          justify-self: center;
          justify-items: center;
       }
    }
 }
 
-//Animacion
+//Animaciones
 @keyframes girar{
    from{
       transform: translatey(0px);
    }
    to{
-      transform: translatey(-1800px);
+      transform: translatey(-2800px);
    }
+}
+
+.botonEnviar:active {
+   background-color: #3e8e41;
+   box-shadow: 0 5px #666;
+   transform: translateY(4px);
 }

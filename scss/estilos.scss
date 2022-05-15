@@ -48,8 +48,8 @@ body{
    align-self: center;
    min-height: 100%;
    main{
-      #tituloGaleano{
-         color: #f5ac58;
+      .tituloGaleano{
+         color: $color-naranja;
          justify-content: center;
       }
          .tituloFotografia{
@@ -69,8 +69,7 @@ body{
 
 //estilos footer
 footer{
-   background-color: $color-principal;
-   background-color: #f5ac58;
+   background-color: $color-naranja;
    padding-top: 0.5rem;
    display: flex;
    flex-direction: column;
