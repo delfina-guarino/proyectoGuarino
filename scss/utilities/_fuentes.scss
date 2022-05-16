@@ -172,7 +172,7 @@ p{
          font-size: 1rem;
       }
       h1{
-         font-size: 2.4rem;
+         font-size: 2.5rem;
       }
    }
 
@@ -212,4 +212,76 @@ p{
       justify-content: end;
       margin: 1rem;
    }
+}
+
+
+//proyecto 1
+
+@media only screen and (min-width: 1024px){
+   main{
+      .gridProyecto1{
+         .infoProUno{
+            h1{
+               font-size: 4.2rem;
+            }
+            h4{
+               font-size: 1rem;
+            }
+         }
+         .fotos{
+            grid-template-areas: fotos;
+            justify-content: center;
+            img{
+               justify-content: center;
+
+            }
+         }
+      }
+   }  
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px){
+   main{
+      .gridProyecto1{
+         .infoProUno{
+            h1{
+               font-size: 3rem;
+            }
+            h4{
+               font-size: 1.2rem;
+            }
+         }
+         .fotos{
+            grid-template-areas: fotos;
+            justify-content: center;
+            img{
+               justify-content: center;
+
+            }
+         }
+      }
+   }  
+}
+
+@media only screen and (max-width: 767px){
+   main{
+      .gridProyecto1{
+         .infoProUno{
+            h1{
+               font-size: 2.5rem;
+            }
+            h4{
+               font-size: 1rem;
+            }
+         }
+         .fotos{
+            grid-template-areas: fotos;
+            justify-content: center;
+            img{
+               justify-content: center;
+
+            }
+         }
+      }
+   }  
 }

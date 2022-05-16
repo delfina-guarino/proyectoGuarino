@@ -590,29 +590,23 @@
          display: grid;
          grid-column-gap: 1rem; 
          grid-template-areas: "info fotos";
+         grid-template-columns: 1fr 2fr;
          margin-top: 1rem;
          justify-self: center;
          gap: 10rem;
          .infoProUno{
             grid-template-areas: info;
-            display: block;
-            position: fixed;
+            position: sticky;
+            top:80px;
             align-self: flex-start;
             justify-content: center;
-            width: 30%;
             margin-left: 8rem;
-            padding-top: 3rem;
+            padding: 3rem 2rem 0rem 0rem;
          }
          .fotos{
             grid-template-areas: fotos;
-            display: block;
-            justify-content: end;
             margin-top: 3rem;
-            width: 60%;
-            margin-left: 45%;
-            img{
-               padding: 1rem;
-            }
+            margin-right: 1.5rem;
          }
       }
    }
@@ -623,67 +617,55 @@
 
 
 //VISTA TABLET PROYECTO 1
-@media only screen and (max-width: 767px){
+@media only screen and (min-width: 768px) and (max-width:1023px){
    main{
       .gridProyecto1{
+         z-index: 999;
          min-height: 100%;
-         height: 80vh;
-         display: grid;
-         grid-column-gap: 1rem; 
-         grid-template-areas: "info"
-                              "fotos";
+         height: 100%;
          margin-top: 1rem;
-         gap: 1rem;
-         justify-items: center;
-         align-items: center;                     
          justify-content: center;
+         justify-items: center;
+         margin-left: 8rem;
          .infoProUno{
-            grid-template-areas: info;
-            align-self: flex-start;
-            justify-content: center;
-            width: 28rem;
+            padding: 3rem 2rem 0rem 0rem;
          }
          .fotos{
             grid-template-areas: fotos;
-            justify-content: center;
-            img{
-               justify-content: center;
-
-            }
+            margin-top: 3rem;
+            margin-right: 1.5rem;
+            width: 80%;
          }
       }
+   }
+   footer{
+      position: relative;
    }  
 }
+
 
 //VISTA MOBILE PROYECTO 1
 @media only screen and (max-width: 767px){
    main{
       .gridProyecto1{
+         z-index: 999;
          min-height: 100%;
-         height: 80vh;
-         display: grid;
-         grid-column-gap: 1rem; 
-         grid-template-areas: "info"
-                              "fotos";
+         height: 100%;
          margin-top: 1rem;
-         gap: 1rem;
-         justify-items: center;
-         align-items: center;                     
          justify-content: center;
+         justify-items: center;
+         margin-left: 2rem;
          .infoProUno{
-            grid-template-areas: info;
-            align-self: flex-start;
-            justify-content: center;
-            width: 28rem;
+            padding: 3rem 2rem 0rem 0rem;
          }
          .fotos{
             grid-template-areas: fotos;
-            justify-content: center;
-            img{
-               justify-content: center;
-
-            }
+            margin-top: 3rem;
+            margin-right: 1.5rem;
          }
       }
+   }
+   footer{
+      position: relative;
    }  
 }
