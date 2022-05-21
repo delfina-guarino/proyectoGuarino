@@ -10,7 +10,7 @@
       .animacionIndex{
          animation-name: girar;
          animation-iteration-count: infinite;
-         animation-duration: 30s;
+         animation-duration: 50s;
          justify-self: center;
          justify-items: center;
       }
@@ -27,7 +27,7 @@
       .animacionIndex{
          animation-name: girar;
          animation-iteration-count: infinite;
-         animation-duration: 40s;
+         animation-duration: 50s;
          justify-self: center;
          justify-items: center;
       }
@@ -44,7 +44,7 @@
       .animacionIndex{
          animation-name: girar;
          animation-iteration-count: infinite;
-         animation-duration: 40s;
+         animation-duration: 50s;
          justify-self: center;
          justify-items: center;
       }
@@ -54,7 +54,7 @@
 //Animaciones
 @keyframes girar{
    from{
-      transform: translatey(0px);
+      transform: translatey(50px);
    }
    to{
       transform: translatey(-2800px);
@@ -62,7 +62,7 @@
 }
 
 .botonEnviar:active {
-   background-color: #3e8e41;
+   background-color: #b4b4b4;
    box-shadow: 0 5px #666;
-   transform: translateY(4px);
+   transform: translateY(0px);
 }
